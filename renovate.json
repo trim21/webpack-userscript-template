@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "schedule:monthly",
+    ":masterIssue",
+    "config:base"
+  ],
+  "prHourlyLimit": 6,
+  "lockFileMaintenance": {
+    "enabled": true
+  }
+}
