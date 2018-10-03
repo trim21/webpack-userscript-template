@@ -1,24 +1,24 @@
 const pkg = require('../package.json')
 
 module.exports = {
-  'name': 'webpack-userscript-template',
-  'namespace': 'https://trim21.me/',
-  'version': pkg['version'],
-  'author': pkg['author'],
-  'source': pkg['repository']['url'],
+  name: 'webpack-userscript-template',
+  namespace: 'https://trim21.me/',
+  version: pkg.version,
+  author: pkg.author,
+  source: pkg.repository.url,
   // 'license': 'MIT',
-  'match': [
+  match: [
     'http://www.example.com/*'
   ],
-  'require': [
-    'https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js',
-    'https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js',
-    'https://cdn.jsdelivr.net/npm/axios-userscript-adapter@0.0.3/dist/axiosGmxhrAdapter.min.js'
+  require: [
+    `https://cdn.jsdelivr.net/npm/jquery@${pkg.dependencies.jquery}/dist/jquery.min.js`,
+    `https://cdn.jsdelivr.net/npm/axios@${pkg.dependencies.axios}/dist/axios.min.js`,
+    `https://cdn.jsdelivr.net/npm/axios-userscript-adapter@${pkg.dependencies['axios-userscript-adapter']}/dist/axiosGmxhrAdapter.min.js`,
   ],
-  'grant': [
+  grant: [
     'GM_xmlhttpRequest'
   ],
-  'connect': [
+  connect: [
     'httpbin.org'
   ],
   'run-at': 'document-end'

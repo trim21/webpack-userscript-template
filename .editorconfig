@@ -6,10 +6,10 @@ insert_final_newline=true
 indent_style=space
 indent_size=4
 
-[{.babelrc,.stylelintrc,.eslintrc,jest.config,*.bowerrc,*.jsb3,*.jsb2,*.json}]
+[{.babelrc,.stylelintrc,.eslintrc,jest.config,*.bowerrc,*.jsb3,*.jsb2,*.json,*.yaml,*.yml}]
 indent_style=space
 indent_size=2
 
-[{*.js,*.vue}]
+[{*.js,*.vue,*.ts}]
 indent_style=space
 indent_size=2

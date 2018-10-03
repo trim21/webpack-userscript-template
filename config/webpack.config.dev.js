@@ -1,37 +1,43 @@
-const merge = require('webpack-merge')
+const path = require("path");
+const merge = require("webpack-merge");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
+const LiveReloadPlugin = require("webpack-livereload-plugin");
+const UserScriptMetaDataPlugin = require("userscript-metadata-webpack-plugin");
+const metadata = require("./metadata");
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const webpackConfig = require("./webpack.config.base");
 
-const metadata = require('./metadata')
-const path = require('path')
-const UserScriptMetaDataPlugin = require('userscript-metadata-webpack-plugin')
-const WatchLiveReloadPlugin = require('webpack-watch-livereload-plugin')
-const webpackConfig = require('./webpack.config.base')
-let cfg = merge(webpackConfig, {
-  output: {
-    filename: metadata.name + '.dev.user.js'
+metadata.require.push(
+  "file://" + path.resolve(__dirname, "../dist/index.prod.user.js")
+);
+
+const cfg = merge(webpackConfig, {
+  entry: {
+    prod: webpackConfig.entry,
+    dev: path.resolve(__dirname, "./empty.js"),
   },
-  devtool: 'inline-source-map',
+  output: {
+    filename: "index.[name].user.js",
+    path: path.resolve(__dirname, "../dist"),
+  },
+  devtool: "inline-source-map",
+  watch: true,
+  watchOptions: {
+    ignored: /node_modules/,
+  },
   plugins: [
-    new WatchLiveReloadPlugin({
+    new LiveReloadPlugin({
       delay: 500,
-      files: [
-        // Replace these globs with yours
-        './src/**/*.html',
-        './src/**/*.css',
-        './src/**/*.js'
-      ]
-    })
-  ]
-})
-metadata.require.push('file://' + path.resolve(__dirname, '../dist', cfg.output.filename))
-
-cfg.plugins.push(new UserScriptMetaDataPlugin({
-  metadata
-}))
+    }),
+    new UserScriptMetaDataPlugin({
+      metadata,
+    }),
+  ],
+});
 
 if (process.env.npm_config_report) {
-  cfg.plugins.push(new BundleAnalyzerPlugin())
+  cfg.plugins.push(new BundleAnalyzerPlugin());
 }
 
-module.exports = cfg
+module.exports = cfg;

@@ -1,13 +1,12 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const pkg = require('../package.json')
-let webpackConfig = {
+const webpackConfig = {
   node: {
     Buffer: false
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js', '.ts']
   },
   // performance: {
   // hints: false
@@ -20,7 +19,7 @@ let webpackConfig = {
     path: path.resolve(__dirname, '../dist')
   },
   externals: {
-    'jquery': '$',
+    jquery: '$',
     axios: 'axios',
     'axios-userscript-adapter': 'axiosGmxhrAdapter'
   },
@@ -32,19 +31,28 @@ let webpackConfig = {
         loader: 'eslint-loader'
       },
       {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        loader: 'ts-loader'
+      },
+      {
+        test: /\.less$/,
+        loader: [
+          'style-loader',
+          'css-loader',
+          'less-loader', // 将 Less 编译为 CSS
+        ]
+      },
+      {
         test: /\.css$/,
         loaders: [
           'style-loader',
           'css-loader',
-          'postcss-loader'
         ]
       }
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'version': JSON.stringify(pkg.version)
-    }),
     new webpack.HashedModuleIdsPlugin()
   ]
 }
