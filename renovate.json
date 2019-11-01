@@ -1,5 +1,20 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+  ],
+  "prHourlyLimit": 6,
+  "packageRules": [
+    {
+      "groupName": "deps-prod",
+      "depTypeList": [
+        "dependencies"
+      ]
+    },
+    {
+      "groupName": "deps-dev",
+      "depTypeList": [
+        "devDependencies"
+      ]
+    }
   ]
 }
