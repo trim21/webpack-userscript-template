@@ -30,7 +30,7 @@
   "devDependencies": {
     "autoprefixer": "9.7.1",
     "cross-env": "6.0.3",
-    "css-loader": "0.28.11",
+    "css-loader": "3.2.0",
     "eslint": "5.16.0",
     "eslint-config-standard": "11.0.0",
     "eslint-loader": "2.2.1",
