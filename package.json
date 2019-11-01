@@ -29,7 +29,7 @@
   "private": false,
   "devDependencies": {
     "autoprefixer": "9.7.1",
-    "cross-env": "5.2.1",
+    "cross-env": "6.0.3",
     "css-loader": "0.28.11",
     "eslint": "5.16.0",
     "eslint-config-standard": "11.0.0",
