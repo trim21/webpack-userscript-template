@@ -39,7 +39,7 @@
     "eslint-plugin-promise": "3.8.0",
     "eslint-plugin-standard": "3.1.0",
     "html-loader": "0.5.5",
-    "postcss-loader": "2.1.6",
+    "postcss-loader": "3.0.0",
     "style-loader": "0.23.1",
     "userscript-metadata-webpack-plugin": "0.0.3",
     "webpack": "4.41.2",
