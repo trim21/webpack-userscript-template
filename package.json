@@ -32,7 +32,7 @@
     "cross-env": "6.0.3",
     "css-loader": "0.28.11",
     "eslint": "5.16.0",
-    "eslint-config-standard": "11.0.0",
+    "eslint-config-standard": "14.1.0",
     "eslint-loader": "2.2.1",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-node": "7.0.1",
