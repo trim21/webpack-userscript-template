@@ -26,6 +26,18 @@ because Tampermonkey don't read it from dist every times.
 
 livereload is default enabled, use [this chrome extension](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)
 
+## dependencies
+
+There are two ways to using a package on npm.
+
+### UserScript way
+
+like original UserScript way, you will need to add them to your [user script metadata's require section](./config/metadata.js#L13-L17)  , and exclude them in [config/webpack.config.base.js](./config/webpack.config.base.js#L22-L26)
+
+### Webpack way
+
+just install a package and import it in your js file. webpack will pack them with in your final production js file.
+
 ## build
 
 ```bash
