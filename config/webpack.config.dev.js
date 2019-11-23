@@ -14,7 +14,14 @@ const output = {
 metadata.require.push('file://' + path.resolve(__dirname, '../dist', output.filename))
 
 const cfg = merge(webpackConfig, {
-  output,
+  entry: {
+    prod: webpackConfig.entry,
+    dev: path.resolve(__dirname, './empty.js'),
+  },
+  output: {
+    filename: `${metadata.name}.[name].user.js`,
+    path: path.resolve(__dirname, '../dist'),
+  },
   devtool: 'inline-source-map',
   watch: true,
   watchOptions: {

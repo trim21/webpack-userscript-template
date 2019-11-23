@@ -13,7 +13,7 @@ module.exports = {
   require: [
     'https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js',
     'https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js',
-    'https://cdn.jsdelivr.net/npm/axios-userscript-adapter@0.0.3/dist/axiosGmxhrAdapter.min.js'
+    'https://cdn.jsdelivr.net/npm/axios-userscript-adapter@0.0.3/dist/axiosGmxhrAdapter.min.js',
   ],
   grant: [
     'GM_xmlhttpRequest'

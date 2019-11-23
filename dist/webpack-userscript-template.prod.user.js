@@ -569,6 +569,8 @@ var main = __webpack_require__("4prM");
 
 
 
+console.log('script start')
+
 external_axios_default.a.get('https://httpbin.org/headers', { headers: { key: 'value' } }).then(
   response => {
     console.log(response.data)
