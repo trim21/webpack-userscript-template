@@ -1,6 +1,6 @@
 # This is a project help you build userscript with webpack
 
-Just use this git repo as a template.
+Just [use this git repo as a template](https://github.com/Trim21/webpack-userscript-template/generate).
 
 ## dev
 
@@ -8,7 +8,7 @@ Just use this git repo as a template.
 npm run dev
 ```
 
-**make sure you run `npm run dev` before these steps, or the file path will be incorrect.**
+**make sure you run `npm run dev` before these steps, otherwise the file path will be incorrect.**
 
 1. Allow Tampermonkey's access to local file URIs [tampermonkey/faq](https://tampermonkey.net/faq.php?ext=dhdg#Q204)
 2. open `webpack-userscript-template\dist\webpack-userscript-template.dev.user.js` in your Chrome.
