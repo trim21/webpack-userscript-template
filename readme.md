@@ -11,14 +11,14 @@ npm run dev
 **make sure you run `npm run dev` before these steps, otherwise the file path will be incorrect.**
 
 1. Allow Tampermonkey's access to local file URIs [tampermonkey/faq](https://tampermonkey.net/faq.php?ext=dhdg#Q204)
-2. open `webpack-userscript-template\dist\webpack-userscript-template.dev.user.js` in your Chrome.
-3. Install thid template.
+2. open `webpack-userscript-template/dist/webpack-userscript-template.dev.user.js` in your Chrome.
+3. Install it.
 
-this meta contains `// @require file://path/to/dist/webpack-userscript-template.prod.user.js`,
+this userscript's meta contains `// @require file://path/to/dist/webpack-userscript-template.prod.user.js`,
 it will run the code in `webpack-userscript-template.prod.user.js`,
 which take [src/js/index.js](./src/js/index.js) as entry point.
 
-so every times you edit your metadata, you'll have to install it again,
+every times you edit your metadata, you'll have to install it again,
 because Tampermonkey don't read it from dist every times.
 
 4. edit [src/index.js](./src/index.js) with es6, you can even import css or less files. You can use scss if you like.
