@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const pkg = require('../package.json')
 const webpackConfig = {
   node: {
     Buffer: false
@@ -51,9 +50,6 @@ const webpackConfig = {
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      version: JSON.stringify(pkg.version)
-    }),
     new webpack.HashedModuleIdsPlugin()
   ]
 }
