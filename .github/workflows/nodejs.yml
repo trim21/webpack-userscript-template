@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - '**'
+      - '*'
+  push:
+    branches:
+      - '*'
+      - '**'
+      - '!renovate/**'
+    tags:
+      - '.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-16.04
+
+    strategy:
+      matrix:
+        node: [ '10', '8' ]
+
+    name: Node ${{ matrix.node }}
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - uses: actions/cache@v1
+        id: cache
+        with:
+          path: ./mode_modules
+          key: ${{ runner.os }}-${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - run: npm run build
