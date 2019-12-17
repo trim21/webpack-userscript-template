@@ -1,6 +1,7 @@
 {
   "extends": [
     "schedule:monthly",
+    ":masterIssue",
     "config:base"
   ],
   "prHourlyLimit": 6,
