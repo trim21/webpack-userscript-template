@@ -1,5 +1,6 @@
 {
   "extends": [
+    "schedule:monthly",
     "config:base"
   ],
   "prHourlyLimit": 6,
