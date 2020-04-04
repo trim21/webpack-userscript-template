@@ -5,6 +5,9 @@
     "config:base"
   ],
   "prHourlyLimit": 6,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "groupName": "deps-prod",
