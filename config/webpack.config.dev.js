@@ -8,7 +8,7 @@ const LiveReloadPlugin = require('webpack-livereload-plugin')
 const webpackConfig = require('./webpack.config.base')
 
 const output = {
-  filename: metadata.name + '.dev.user.js'
+  filename: metadata.name + '.prod.user.js'
 }
 
 metadata.require.push('file://' + path.resolve(__dirname, '../dist', output.filename))
