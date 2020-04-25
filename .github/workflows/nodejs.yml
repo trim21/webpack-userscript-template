@@ -6,7 +6,7 @@ on:
       - gh-pages
       - "renovate/**"
     tags:
-      - "v*" # Push events to v1 tag
+      - "v*"
   pull_request:
 
 jobs:
