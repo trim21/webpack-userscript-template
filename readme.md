@@ -44,7 +44,7 @@ just install a package and import it in your js file. webpack will pack them wit
 npm run build
 ```
 
-[dist/index.prod.user.js](./dist/.prod.user.js) is the finally script. you can manually copy it to greaskfork for deploy.
+`dist/index.prod.user.js` is the finally script. you can manually copy it to greaskfork for deploy.
 
 ## TypeScript
 
