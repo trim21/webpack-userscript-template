@@ -6,7 +6,7 @@ const webpackConfig = {
     Buffer: false
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js', '.ts']
   },
   // performance: {
   // hints: false
@@ -29,6 +29,11 @@ const webpackConfig = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'eslint-loader'
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        loader: 'ts-loader'
       },
       {
         test: /\.less$/,

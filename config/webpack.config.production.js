@@ -8,7 +8,7 @@ const metadata = require('./metadata')
 const webpackConfig = require('./webpack.config.base')
 const cfg = merge({}, webpackConfig, {
   output: {
-    filename: metadata.name + '.prod.user.js'
+    filename: 'index.prod.user.js'
   },
   plugins: [
     new UserScriptMetaDataPlugin({

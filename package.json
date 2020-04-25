@@ -13,15 +13,10 @@
   "eslintIgnore": [
     "dist/*.js"
   ],
-  "eslintConfig": {
-    "extends": "standard",
-    "rules": {
-      "comma-dangle": "off"
-    }
-  },
   "scripts": {
-    "lint": "eslint .",
-    "version": "npm run build && git add .",
+    "lint": "eslint src/**/*.js src/**/*.ts",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags",
     "anylize": "cross-env npm_config_report=true npm run build",
     "build": "webpack --mode production --config config/webpack.config.production.js",
     "dev": "webpack --mode development --config config/webpack.config.dev.js"
@@ -33,9 +28,12 @@
   "private": true,
   "dependencies": {
     "axios": "0.19.2",
-    "axios-userscript-adapter": "0.0.4"
+    "axios-userscript-adapter": "0.0.4",
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.29.0",
+    "@typescript-eslint/parser": "2.29.0",
     "autoprefixer": "9.7.5",
     "cross-env": "7.0.2",
     "css-loader": "3.4.2",
@@ -52,6 +50,8 @@
     "less-loader": "5.0.0",
     "postcss-loader": "3.0.0",
     "style-loader": "1.1.3",
+    "ts-loader": "7.0.1",
+    "typescript": "3.8.3",
     "userscript-metadata-webpack-plugin": "0.0.3",
     "webpack": "4.42.1",
     "webpack-bundle-analyzer": "3.6.1",

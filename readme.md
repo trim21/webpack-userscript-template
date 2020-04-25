@@ -44,11 +44,15 @@ just install a package and import it in your js file. webpack will pack them wit
 npm run build
 ```
 
-[dist/${metadata.name}.prod.user.js](./dist/webpack-userscript-template.prod.user.js)
+[dist/index.prod.user.js](./dist/.prod.user.js)
 is the finally file. you can include it in your git repo or manually copy it to greaskfork for deploy.
-
 
 ## TypeScript
 
-Sorry, There are some issues when using TypeScript,
-and I have no idea how to fix them painlessly. If you have any idea, PR is wellcomed.
+TypeScript works.
+
+## deploy
+
+[github actions](./github/workflows/nodejs.yml) will deploy production usersctip to gh-pages branch.
+
+you can find it in `${pages url root}/index.prod.user.js`
