@@ -16,7 +16,7 @@
   "scripts": {
     "lint": "eslint src/**/*.js src/**/*.ts",
     "preversion": "npm run lint",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push --follow-tags",
     "anylize": "cross-env npm_config_report=true npm run build",
     "build": "webpack --mode production --config config/webpack.config.production.js",
     "dev": "webpack --mode development --config config/webpack.config.dev.js"
