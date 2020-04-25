@@ -26,6 +26,11 @@ because Tampermonkey don't read it from dist every times.
 
 livereload is default enabled, use [this chrome extension](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)
 
+
+## TypeScript
+
+use typescript as normal, see [example](src/js/example.ts)
+
 ## dependencies
 
 There are two ways to using a package on npm.
@@ -45,10 +50,6 @@ npm run build
 ```
 
 `dist/index.prod.user.js` is the finally script. you can manually copy it to greaskfork for deploy.
-
-## TypeScript
-
-TypeScript works.
 
 ## deploy
 
