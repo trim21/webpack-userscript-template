@@ -11,11 +11,11 @@ npm run dev
 **make sure you run `npm run dev` before these steps, otherwise the file path will be incorrect.**
 
 1. Allow Tampermonkey's access to local file URIs [tampermonkey/faq](https://tampermonkey.net/faq.php?ext=dhdg#Q204)
-2. open `webpack-userscript-template/dist/webpack-userscript-template.dev.user.js` in your Chrome.
+2. open `webpack-userscript-template/dist/index.dev.user.js` in your Chrome.
 3. Install it.
 
-this userscript's meta contains `// @require file://path/to/dist/webpack-userscript-template.prod.user.js`,
-it will run the code in `webpack-userscript-template.prod.user.js`,
+this userscript's meta contains `// @require file://path/to/dist/index.prod.user.js`,
+it will run the code in `index.prod.user.js`,
 which take [src/js/index.js](./src/js/index.js) as entry point.
 
 every times you edit your metadata, you'll have to install it again,
@@ -44,8 +44,7 @@ just install a package and import it in your js file. webpack will pack them wit
 npm run build
 ```
 
-[dist/index.prod.user.js](./dist/.prod.user.js)
-is the finally file. you can include it in your git repo or manually copy it to greaskfork for deploy.
+[dist/index.prod.user.js](./dist/.prod.user.js) is the finally script. you can manually copy it to greaskfork for deploy.
 
 ## TypeScript
 
@@ -55,4 +54,4 @@ TypeScript works.
 
 [github actions](./github/workflows/nodejs.yml) will deploy production usersctip to gh-pages branch.
 
-you can find it in `${pages url root}/index.prod.user.js`
+[example](https://github.com/Trim21/webpack-userscript-template/tree/gh-pages)
