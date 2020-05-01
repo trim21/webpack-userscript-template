@@ -29,7 +29,7 @@
   "dependencies": {
     "axios": "0.19.2",
     "axios-userscript-adapter": "0.0.4",
-    "jquery": "^3.5.0"
+    "jquery": "3.5.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "2.29.0",
