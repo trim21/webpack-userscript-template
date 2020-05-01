@@ -4,8 +4,17 @@
     ":masterIssue",
     "config:base"
   ],
-  "prHourlyLimit": 6,
+  "prHourlyLimit": 0,
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
+  "packageRules": [
+    {
+      "groupName": "dependencies",
+      "depTypeList": [
+        "dependencies",
+        "devDependencies"
+      ]
+    }
+  ]
 }
