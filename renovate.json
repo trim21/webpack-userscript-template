@@ -8,6 +8,7 @@
   "lockFileMaintenance": {
     "enabled": true
   },
+  "separateMajorMinor": false,
   "packageRules": [
     {
       "groupName": "dependencies",
