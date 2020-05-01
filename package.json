@@ -34,7 +34,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "2.29.0",
     "@typescript-eslint/parser": "2.29.0",
-    "autoprefixer": "9.7.5",
+    "autoprefixer": "9.7.6",
     "cross-env": "7.0.2",
     "css-loader": "3.4.2",
     "cssnano": "4.1.10",
