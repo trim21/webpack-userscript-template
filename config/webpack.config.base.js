@@ -40,7 +40,6 @@ const webpackConfig = {
         loader: [
           'style-loader',
           'css-loader',
-          'postcss-loader',
           'less-loader', // 将 Less 编译为 CSS
         ]
       },
@@ -49,7 +48,6 @@ const webpackConfig = {
         loaders: [
           'style-loader',
           'css-loader',
-          'postcss-loader'
         ]
       }
     ]
