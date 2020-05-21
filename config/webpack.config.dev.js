@@ -19,7 +19,7 @@ const cfg = merge(webpackConfig, {
     dev: path.resolve(__dirname, './empty.js'),
   },
   output: {
-    filename: 'index.[name].user.js',
+    filename: 'output.filename.[name].user.js',
     path: path.resolve(__dirname, '../dist'),
   },
   devtool: 'inline-source-map',
