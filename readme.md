@@ -23,7 +23,7 @@ which take [src/js/index.js](./src/js/index.js) as entry point.
 every times you edit your metadata, you'll have to install it again,
 because Tampermonkey don't read it from dist every times.
 
-4. edit [src/index.js](./src/index.js) with es6, you can even import css or less files. You can use scss if you like.
+4. edit [src/js/index.js](./src/js/index.js) with es6, you can even import css or less files. You can use scss if you like.
 5. go wo <https://www.example.com/> and open console, you'll see it working.
 
 livereload is default enabled, use [this chrome extension](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)

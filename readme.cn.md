@@ -15,7 +15,7 @@
 
 每次你修改了你的[metadata](./config/metadata.js)，你需要重新安装`index.dev.user.js`。
 
-6. 修改 [src/index.js](./src/index.js) 。如果你需要的话你可以引入css或者less文件。你也可以通过设置webpack来引入scss。
+6. 修改 [src/js/index.js](./src/js/index.js) 。如果你需要的话你可以引入css或者less文件。你也可以通过设置webpack来引入scss。
 7. 在 <https://www.example.com/> 并且打开控制台，你可以看到用户脚本被运行。
 
 livereload 默认启用。在浏览器中进行自动刷新需要 [这个 chrome 插件](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)
