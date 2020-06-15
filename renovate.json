@@ -10,7 +10,7 @@
       "schedule:monthly",
     ],
     "enabled": true
-  },,
+  },
   "separateMajorMinor": false,
   "updateNotScheduled": false,
   "packageRules": [
