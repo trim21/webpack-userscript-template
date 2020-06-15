@@ -7,7 +7,7 @@
   "prHourlyLimit": 0,
   "lockFileMaintenance": {
     "extends": [
-      "schedule:monthly",
+      "schedule:monthly"
     ],
     "enabled": true
   },
