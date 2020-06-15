@@ -6,9 +6,13 @@
   ],
   "prHourlyLimit": 0,
   "lockFileMaintenance": {
+    "extends": [
+      "schedule:monthly",
+    ],
     "enabled": true
-  },
+  },,
   "separateMajorMinor": false,
+  "updateNotScheduled": false,
   "packageRules": [
     {
       "groupName": "dependencies",
