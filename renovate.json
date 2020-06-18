@@ -11,6 +11,9 @@
     ],
     "enabled": true
   },
+  "postUpdateOptions": [
+    "npmDedupe"
+  ],
   "separateMajorMinor": false,
   "updateNotScheduled": false,
   "packageRules": [
