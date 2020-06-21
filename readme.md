@@ -47,10 +47,12 @@ npm run build
 
 `dist/index.prod.user.js` is the finally script. you can manually copy it to greaskfork for deploy.
 
-## deploy
+## auto deploy
 
 [github actions](./.github/workflows/nodejs.yml#L68) will deploy production usersctip to gh-pages branch.
 
 [example](https://github.com/Trim21/webpack-userscript-template/tree/gh-pages)
 
 [deployed](https://trim21.github.io/webpack-userscript-template/)
+
+You can auto use greskfork's auto update function.
