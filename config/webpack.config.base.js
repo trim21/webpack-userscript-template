@@ -45,7 +45,7 @@ const webpackConfig = {
       },
       {
         test: /\.css$/,
-        loaders: [
+        loader: [
           'style-loader',
           'css-loader',
         ]
