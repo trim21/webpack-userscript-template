@@ -53,3 +53,5 @@ npm run build
 [example](https://github.com/Trim21/webpack-userscript-template/tree/gh-pages)
 
 [deployed](https://trim21.github.io/webpack-userscript-template/)
+
+也可以使用greaskfork的自动同步功能来自动同步此链接。
