@@ -49,7 +49,7 @@ npm run build
 
 ## auto deploy
 
-[github actions](./.github/workflows/nodejs.yml#L68) will deploy production usersctip to gh-pages branch.
+[github actions](./.github/workflows/deploy.yaml#L36) will deploy production usersctip to gh-pages branch.
 
 [example](https://github.com/Trim21/webpack-userscript-template/tree/gh-pages)
 
