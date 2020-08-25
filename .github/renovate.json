@@ -7,8 +7,9 @@
   "prHourlyLimit": 0,
   "lockFileMaintenance": {
     "extends": [
-      "schedule:monthly"
+      "schedule:weekly"
     ],
+    "automerge": true,
     "enabled": true
   },
   "postUpdateOptions": [
