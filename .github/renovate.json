@@ -5,6 +5,7 @@
     "config:base"
   ],
   "prHourlyLimit": 0,
+  "rangeStrategy": "pin",
   "lockFileMaintenance": {
     "extends": [
       "schedule:weekly"
