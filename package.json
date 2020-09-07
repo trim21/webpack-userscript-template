@@ -28,14 +28,14 @@
   "private": true,
   "dependencies": {
     "axios": "0.20.0",
-    "axios-userscript-adapter": "0.0.6",
+    "axios-userscript-adapter": "0.0.7",
     "jquery": "3.5.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "4.0.1",
     "@typescript-eslint/parser": "4.0.1",
     "css-loader": "4.2.2",
-    "eslint": "7.8.0",
+    "eslint": "7.8.1",
     "eslint-config-standard": "14.1.1",
     "eslint-loader": "4.0.2",
     "eslint-plugin-import": "2.22.0",
@@ -43,7 +43,7 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
     "less": "3.12.2",
-    "less-loader": "7.0.0",
+    "less-loader": "7.0.1",
     "style-loader": "1.2.1",
     "ts-loader": "8.0.3",
     "typescript": "4.0.2",
