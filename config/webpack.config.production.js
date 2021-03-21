@@ -1,19 +1,21 @@
-const { merge } = require("webpack-merge");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-
+const { merge } = require('webpack-merge')
 const UserScriptMetaDataPlugin = require('userscript-metadata-webpack-plugin')
-const metadata = require('./metadata')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
 
+const metadata = require('./metadata')
 const webpackConfig = require('./webpack.config.base')
+
 const cfg = merge({}, webpackConfig, {
+  mode: 'production',
   output: {
-    filename: 'index.prod.user.js'
+    filename: metadata.name + '.prod.user.js',
   },
   plugins: [
     new UserScriptMetaDataPlugin({
-      metadata
-    })
-  ]
+      metadata,
+    }),
+  ],
 })
 
 if (process.env.npm_config_report) {

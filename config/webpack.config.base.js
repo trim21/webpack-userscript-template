@@ -2,17 +2,12 @@ const path = require('path')
 const webpack = require('webpack')
 
 const webpackConfig = {
-  node: {
-    Buffer: false
-  },
   resolve: {
     extensions: ['.js', '.ts']
   },
-  // performance: {
-  // hints: false
-  // },
   optimization: {
-    minimize: false
+    minimize: false,
+    moduleIds: 'named',
   },
   entry: './src/js/index.js',
   output: {
@@ -26,9 +21,11 @@ const webpackConfig = {
   module: {
     rules: [
       {
+        use: {
+          loader: 'babel-loader',
+        },
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader'
+        exclude: /node_modules/
       },
       {
         test: /\.ts$/,
@@ -37,7 +34,7 @@ const webpackConfig = {
       },
       {
         test: /\.less$/,
-        loader: [
+        use: [
           'style-loader',
           'css-loader',
           'less-loader', // 将 Less 编译为 CSS
@@ -45,16 +42,13 @@ const webpackConfig = {
       },
       {
         test: /\.css$/,
-        loader: [
+        use: [
           'style-loader',
           'css-loader',
         ]
       }
     ]
   },
-  plugins: [
-    new webpack.HashedModuleIdsPlugin()
-  ]
 }
 
 module.exports = webpackConfig
