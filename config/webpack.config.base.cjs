@@ -1,4 +1,5 @@
 const path = require('path')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const webpackConfig = {
   resolve: {
@@ -24,11 +25,9 @@ const webpackConfig = {
           loader: 'babel-loader',
         },
         test: /\.js$/,
-        exclude: /node_modules/
       },
       {
         test: /\.ts$/,
-        exclude: /node_modules/,
         loader: 'ts-loader'
       },
       {
@@ -48,6 +47,7 @@ const webpackConfig = {
       }
     ]
   },
+  plugins: process.env.npm_config_report ? [new BundleAnalyzerPlugin()] : [],
 }
 
 module.exports = webpackConfig
