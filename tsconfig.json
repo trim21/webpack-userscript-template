@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "esModuleInterop": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "moduleResolution": "Node",
+    "module": "ESNext",
     "target": "es6",
     "allowJs": true
   }

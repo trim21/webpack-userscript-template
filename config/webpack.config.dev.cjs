@@ -4,9 +4,9 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 const LiveReloadPlugin = require('webpack-livereload-plugin')
 const UserScriptMetaDataPlugin = require('userscript-metadata-webpack-plugin')
-const metadata = require('./metadata')
+const metadata = require('./metadata.cjs')
 
-const webpackConfig = require('./webpack.config.base')
+const webpackConfig = require('./webpack.config.base.cjs')
 
 metadata.require.push(
   'file://' + path.resolve(__dirname, '../dist/index.prod.user.js')
@@ -15,7 +15,7 @@ metadata.require.push(
 const cfg = merge(webpackConfig, {
   entry: {
     prod: webpackConfig.entry,
-    dev: path.resolve(__dirname, './empty.js'),
+    dev: path.resolve(__dirname, './empty.cjs'),
   },
   output: {
     filename: 'index.[name].user.js',

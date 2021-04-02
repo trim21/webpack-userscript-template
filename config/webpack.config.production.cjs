@@ -3,8 +3,8 @@ const UserScriptMetaDataPlugin = require('userscript-metadata-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 
-const metadata = require('./metadata')
-const webpackConfig = require('./webpack.config.base')
+const metadata = require('./metadata.cjs')
+const webpackConfig = require('./webpack.config.base.cjs')
 
 const cfg = merge({}, webpackConfig, {
   mode: 'production',

@@ -16,7 +16,7 @@ module.exports = {
     `https://cdn.jsdelivr.net/npm/axios-userscript-adapter@${pkg.dependencies['axios-userscript-adapter']}/dist/axiosGmxhrAdapter.min.js`,
   ],
   grant: [
-    'GM_xmlhttpRequest'
+    'GM.xmlHttpRequest'
   ],
   connect: [
     'httpbin.org'
