@@ -7,10 +7,11 @@
     "email": "trim21me@gmail.com"
   },
   "eslintIgnore": [
-    "dist/*.js"
+    "dist/*.js",
+    "node_modules"
   ],
   "scripts": {
-    "lint": "eslint src",
+    "lint": "eslint --ext .ts,.js src",
     "preversion": "npm run lint",
     "postversion": "git push --follow-tags",
     "anylize": "npm_config_report=true npm run build",

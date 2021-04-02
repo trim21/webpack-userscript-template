@@ -1,11 +1,10 @@
 const path = require('path')
 const { merge } = require('webpack-merge')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const LiveReloadPlugin = require('webpack-livereload-plugin')
 const UserScriptMetaDataPlugin = require('userscript-metadata-webpack-plugin')
-const metadata = require('./metadata.cjs')
 
+const metadata = require('./metadata.cjs')
 const webpackConfig = require('./webpack.config.base.cjs')
 
 metadata.require.push(

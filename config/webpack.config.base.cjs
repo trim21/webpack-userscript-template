@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 
 const webpackConfig = {
   resolve: {
@@ -9,7 +8,7 @@ const webpackConfig = {
     minimize: false,
     moduleIds: 'named',
   },
-  entry: './src/js/index.ts',
+  entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, '../dist')
   },
