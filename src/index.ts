@@ -5,10 +5,12 @@ import { add } from './example'
 async function main () {
   console.log('script start')
   console.log(`1 + 2 = ${add(1, 2)}`)
-  const res = await get<{ uuid: string }>('https://httpbin.org/uuid')
+  const res = await get<{ uuid: string }>('/uuid', {
+    baseURL: 'https://httpbin.org',
+  })
   console.log(`uuid: ${res.data.uuid}`)
 }
 
-main().catch(e => {
+main().catch((e) => {
   console.log(e)
 })

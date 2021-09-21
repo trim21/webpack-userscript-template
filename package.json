@@ -24,9 +24,9 @@
   },
   "private": true,
   "dependencies": {
-    "axios": "0.21.2",
-    "axios-userscript-adapter": "0.1.5",
-    "jquery": "3.6.0"
+    "axios": "^0.21.2",
+    "axios-userscript-adapter": "^0.1.5",
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
     "@babel/core": "7.15.0",
