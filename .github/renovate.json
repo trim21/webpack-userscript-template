@@ -5,7 +5,6 @@
     "config:base"
   ],
   "prHourlyLimit": 0,
-  "rangeStrategy": "pin",
   "lockFileMaintenance": {
     "extends": [
       "schedule:weekly"
@@ -18,13 +17,15 @@
   ],
   "separateMajorMinor": false,
   "updateNotScheduled": false,
+  "rangeStrategy": "bump",
   "packageRules": [
     {
-      "groupName": "deps",
+      "groupName": "deps-dev",
       "depTypeList": [
-        "dependencies",
+
         "devDependencies"
-      ]
+      ],
+      "rangeStrategy": "pin"
     }
   ]
 }
