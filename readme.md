@@ -25,7 +25,7 @@ livereload is default enabled, use [this chrome extension](https://chrome.google
 
 ## TypeScript
 
-use typescript as normal, see [example](src/js/example.ts)
+use typescript as normal, see [example](src/index.ts)
 
 ## dependencies
 
