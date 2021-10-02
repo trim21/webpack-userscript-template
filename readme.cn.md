@@ -22,7 +22,7 @@ livereload 默认启用。在浏览器中进行自动刷新需要 [这个 chrome
 
 ## TypeScript
 
-已经设置好了`ts-loader`，可以直接 typescript。[example](src/js/example.ts)
+已经设置好了`ts-loader`，可以直接 typescript。[example](src/index.ts)
 
 ## 使用依赖
 
@@ -36,7 +36,7 @@ livereload 默认启用。在浏览器中进行自动刷新需要 [这个 chrome
 
 直接使用 npm 安装，然后什么都不用管。
 
-这会造成最终打包出来的文件提及增大。
+这会造成最终打包出来的文件体积增大，可读性下降。
 
 ## build
 
