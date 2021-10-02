@@ -13,12 +13,12 @@ Just [use this git repo as a template](https://github.com/Trim21/webpack-userscr
 
 this userscript's meta contains `// @require file://path/to/dist/index.prod.user.js`,
 it will run the code in `index.prod.user.js`,
-which take [src/js/index.ts](./src/js/index.ts) as entry point.
+which take [src/index.ts](./src/index.ts) as entry point.
 
 every times you edit your metadata, you'll have to install it again,
 because Tampermonkey don't read it from dist every times.
 
-5. edit [src/js/index.ts](./src/js/index.ts) with es6, you can even import css or less files. You can use scss if you like.
+5. edit [src/index.ts](./src/index.ts) with es6, you can even import css or less files. You can use scss if you like.
 6. go wo <https://www.example.com/> and open console, you'll see it's working.
 
 livereload is default enabled, use [this chrome extension](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)
