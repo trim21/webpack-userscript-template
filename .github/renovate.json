@@ -17,15 +17,5 @@
   ],
   "separateMajorMinor": false,
   "updateNotScheduled": false,
-  "rangeStrategy": "bump",
-  "packageRules": [
-    {
-      "groupName": "deps-dev",
-      "depTypeList": [
-
-        "devDependencies"
-      ],
-      "rangeStrategy": "pin"
-    }
-  ]
+  "rangeStrategy": "pin"
 }
