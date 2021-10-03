@@ -18,7 +18,7 @@ which take [src/index.ts](./src/index.ts) as entry point.
 every times you edit your metadata, you'll have to install it again,
 because Tampermonkey don't read it from dist every times.
 
-5. edit [src/index.ts](./src/index.ts) with es6, you can even import css or less files. You can use scss if you like.
+5. edit [src/index.ts](./src/index.ts), you can even import css or less files. You can use scss if you like.
 6. go wo <https://www.example.com/> and open console, you'll see it's working.
 
 livereload is default enabled, use [this chrome extension](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)
@@ -33,7 +33,7 @@ There are two ways to using a package on npm.
 
 ### UserScript way
 
-like original UserScript way, you will need to add them to your [user script metadata's require section](./config/metadata.js#L13-L17) , and exclude them in [config/webpack.config.base.js](./config/webpack.config.base.js#L21-L25)
+like original UserScript way, you will need to add them to your [user script metadata's require section](./config/metadata.js#L13-L17) , and exclude them in [config/webpack.config.base.js](./config/webpack.config.base.js#L18-L20)
 
 ### Webpack way
 
@@ -47,6 +47,10 @@ npm run build
 
 `dist/index.prod.user.js` is the finally script. you can manually copy it to greaskfork for deploy.
 
+### minify
+
+There is a [limit in greasyfork](https://greasyfork.org/en/help/code-rules), your code must not be obfuscated or minified.
+
 ## auto deploy
 
 [github actions](./.github/workflows/deploy.yaml#L36) will deploy production userscript to gh-pages branch.
@@ -55,4 +59,4 @@ npm run build
 
 [deployed](https://trim21.github.io/webpack-userscript-template/)
 
-You can auto use greskfork's auto update function.
+You can auto use greasyfork's auto update function.

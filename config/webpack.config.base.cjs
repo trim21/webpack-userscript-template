@@ -13,6 +13,7 @@ const webpackConfig = {
   output: {
     path: path.resolve(__dirname, '../dist')
   },
+  target: 'web',
   externals: {
     jquery: '$',
     axios: 'axios',
@@ -28,14 +29,14 @@ const webpackConfig = {
       },
       {
         test: /\.ts$/,
-        loader: 'ts-loader'
+        loader: 'babel-loader', // use ts-loader if you like
       },
       {
         test: /\.less$/,
         use: [
           'style-loader',
           'css-loader',
-          'less-loader', // 将 Less 编译为 CSS
+          'less-loader',
         ]
       },
       {

@@ -54,4 +54,4 @@ npm run build
 
 [deployed](https://trim21.github.io/webpack-userscript-template/)
 
-也可以使用greaskfork的自动同步功能来自动同步此链接。
+也可以使用 greasyfork 的自动同步功能来自动同步此链接。（greasyfork 的代码规则禁止代码混淆或最小化）
