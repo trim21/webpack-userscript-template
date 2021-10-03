@@ -7,12 +7,12 @@ const metadata = require('./metadata.cjs')
 const webpackConfig = require('./webpack.config.base.cjs')
 
 metadata.require.push(
-  'file://' + path.resolve(__dirname, '../dist/index.prod.user.js')
+  'file://' + path.resolve(__dirname, '../dist/index.debug.user.js')
 )
 
 const cfg = merge(webpackConfig, {
   entry: {
-    prod: webpackConfig.entry,
+    debug: webpackConfig.entry,
     dev: path.resolve(__dirname, './empty.cjs'),
   },
   output: {

@@ -11,8 +11,7 @@ Just [use this git repo as a template](https://github.com/Trim21/webpack-userscr
 3. `npm run dev` to start your development.
 4. open `webpack-userscript-template/dist/index.dev.user.js` in your Chrome and install it with your userscript manager.
 
-this userscript's meta contains `// @require file://path/to/dist/index.prod.user.js`,
-it will run the code in `index.prod.user.js`,
+this userscript's meta contains `// @require file://path/to/dist/index.debug.user.js`,
 which take [src/index.ts](./src/index.ts) as entry point.
 
 every times you edit your metadata, you'll have to install it again,
