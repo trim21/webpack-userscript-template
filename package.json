@@ -31,7 +31,7 @@
   "devDependencies": {
     "@babel/core": "7.15.5",
     "@babel/preset-env": "7.15.6",
-    "@babel/preset-typescript": "^7.15.0",
+    "@babel/preset-typescript": "7.15.0",
     "@typescript-eslint/eslint-plugin": "4.32.0",
     "@typescript-eslint/parser": "4.32.0",
     "babel-loader": "8.2.2",
@@ -48,7 +48,7 @@
     "style-loader": "3.3.0",
     "typescript": "4.4.3",
     "userscript-metadata-webpack-plugin": "0.1.0",
-    "webpack": "5.55.1",
+    "webpack": "5.56.0",
     "webpack-bundle-analyzer": "4.4.2",
     "webpack-cli": "4.8.0",
     "webpack-livereload-plugin": "3.0.2",
