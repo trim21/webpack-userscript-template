@@ -2,6 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 import adapter from 'axios-userscript-adapter'
 
 export function get<T = any, R = AxiosResponse<T>> (url: string, config?: Exclude<Partial<AxiosRequestConfig>, 'adapter'>): Promise<R> {
+  throw new Error('debug error')
   return axios.get(url, {
     adapter,
     ...config

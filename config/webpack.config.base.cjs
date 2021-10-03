@@ -1,4 +1,6 @@
 const path = require('path')
+
+const { BannerPlugin } = require('webpack')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const webpackConfig = {
