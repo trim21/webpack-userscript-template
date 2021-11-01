@@ -6,13 +6,7 @@
     "name": "Trim21",
     "email": "trim21me@gmail.com"
   },
-  "eslintIgnore": [
-    "dist/*.js",
-    "node_modules"
-  ],
   "scripts": {
-    "lint": "eslint --ext .ts,.js src",
-    "preversion": "npm run lint",
     "postversion": "git push --follow-tags",
     "analize": "npm_config_report=true npm run build",
     "build": "webpack --mode production --config config/webpack.config.production.cjs",
@@ -38,12 +32,6 @@
     "babel-loader": "8.2.3",
     "browserslist": "4.17.5",
     "css-loader": "6.5.0",
-    "eslint": "7.32.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-plugin-import": "2.25.2",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.1.1",
-    "eslint-plugin-standard": "4.1.0",
     "less": "4.1.2",
     "less-loader": "10.2.0",
     "style-loader": "3.3.1",
