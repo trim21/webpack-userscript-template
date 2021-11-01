@@ -19,7 +19,7 @@
   "private": true,
   "dependencies": {
     "axios": "0.24.0",
-    "axios-userscript-adapter": "0.1.7",
+    "axios-userscript-adapter": "0.1.8",
     "jquery": "3.6.0"
   },
   "devDependencies": {
