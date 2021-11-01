@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "4.32.0",
     "@typescript-eslint/parser": "4.32.0",
     "babel-loader": "8.2.3",
-    "browserslist": "4.17.2",
+    "browserslist": "4.17.5",
     "css-loader": "6.5.0",
     "eslint": "7.32.0",
     "eslint-config-standard": "16.0.3",
