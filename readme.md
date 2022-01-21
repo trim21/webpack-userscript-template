@@ -14,7 +14,7 @@ Just [use this git repo as a template](https://github.com/Trim21/webpack-userscr
 this userscript's meta contains `// @require file://path/to/dist/index.debug.user.js`,
 which take [src/index.ts](./src/index.ts) as entry point.
 
-every times you edit your metadata, you'll have to install it again,
+every times you edit your metadata, you'll have to restart webpack watch server and install new UserScript in your browser again,
 because Tampermonkey don't read it from dist every times.
 
 5. edit [src/index.ts](./src/index.ts), you can even import css or less files. You can use scss if you like.
