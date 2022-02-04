@@ -23,7 +23,7 @@
     "jquery": "3.6.0"
   },
   "devDependencies": {
-    "@babel/core": "7.16.12",
+    "@babel/core": "7.17.0",
     "@babel/preset-env": "7.16.11",
     "@babel/preset-typescript": "7.16.7",
     "@types/greasemonkey": "4.0.2",
