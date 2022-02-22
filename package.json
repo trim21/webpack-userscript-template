@@ -18,7 +18,7 @@
   },
   "private": true,
   "dependencies": {
-    "axios": "0.25.0",
+    "axios": "0.26.0",
     "axios-userscript-adapter": "0.1.11",
     "jquery": "3.6.0"
   },
