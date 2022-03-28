@@ -9,6 +9,9 @@ const cfg = merge(webpackConfig, {
   output: {
     filename: 'index.prod.user.js',
   },
+  optimization: {
+    minimize: true,
+  },
   plugins: [
     new UserScriptMetaDataPlugin({
       metadata,
