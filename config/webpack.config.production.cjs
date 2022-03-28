@@ -1,4 +1,3 @@
-const { BannerPlugin } = require('webpack')
 const { merge } = require('webpack-merge')
 const UserScriptMetaDataPlugin = require('userscript-metadata-webpack-plugin')
 
