@@ -17,5 +17,5 @@
   ],
   "separateMajorMinor": false,
   "updateNotScheduled": false,
-  "rangeStrategy": "pin"
+  "rangeStrategy": "bump"
 }
