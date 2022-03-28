@@ -20,6 +20,9 @@
 
 livereload 默认启用。在浏览器中进行自动刷新需要 [这个 chrome 插件](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)
 
+在 `dist` 目录中同样会生成 `index.debug.user.js` 文件，
+这个文件在设置了`eval-source-map`，用于在开发过程中可以报告正确的错误行号。
+
 ## TypeScript
 
 已经设置好了`ts-loader`，可以直接 typescript。[example](src/index.ts)
