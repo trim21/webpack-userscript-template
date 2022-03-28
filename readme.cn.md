@@ -11,11 +11,11 @@
 
 被安装的用户脚本包含`// @require file://path/to/dist/index.prod.user.js`,
 所以在每次加载的时候会运行 `index.prod.user.js`。
-`index.prod.user.js`是 webpack 以[src/js/index.ts](./src/js/index.ts)作为入口打包出来的完整的 userscript。
+`index.prod.user.js`是 webpack 以[src/index.ts](./src/index.ts)作为入口打包出来的完整的 userscript。
 
-每次你修改了你的[metadata](./config/metadata.js)，你需要重新安装`index.dev.user.js`。
+每次你修改了你的[metadata](./config/metadata.cjs)，你需要重新安装`index.dev.user.js`。
 
-6. 修改 [src/js/index.ts](./src/js/index.ts) 。如果你需要的话你可以引入 css 或者 less 文件。你也可以通过设置 webpack 来引入 scss。
+6. 修改 [src/index.ts](./src/index.ts) 。如果你需要的话你可以引入 css 或者 less 文件。你也可以通过设置 webpack 来引入 scss。
 7. 在 <https://www.example.com/> 并且打开控制台，你可以看到用户脚本被运行。
 
 livereload 默认启用。在浏览器中进行自动刷新需要 [这个 chrome 插件](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)
@@ -33,7 +33,7 @@ livereload 默认启用。在浏览器中进行自动刷新需要 [这个 chrome
 
 ### 像以往的 UserScript 一样
 
-在 [metadata 的 require 部分](./config/metadata.cjs#L13-L17) 中修改你引入的依赖。然后在 [config/webpack.config.base.cjs](./config/webpack.config.base.js#L21-L25) 的`exclude`配置中里面把他们排除。
+在 [metadata 的 require 部分](./config/metadata.cjs#L13-L17) 中修改你引入的依赖。然后在 [config/webpack.config.base.cjs](./config/webpack.config.base.cjs#L21-L25) 的`exclude`配置中里面把他们排除。
 
 ### 跟以往的 WebPack 一样
 
