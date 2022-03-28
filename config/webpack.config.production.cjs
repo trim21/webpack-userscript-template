@@ -1,3 +1,4 @@
+const { BannerPlugin } = require('webpack')
 const { merge } = require('webpack-merge')
 const UserScriptMetaDataPlugin = require('userscript-metadata-webpack-plugin')
 
@@ -10,7 +11,9 @@ const cfg = merge(webpackConfig, {
     filename: 'index.prod.user.js',
   },
   optimization: {
-    minimize: true,
+    // if you need minimize, you need to config minimizer to keep all comments
+    // to keep userscript meta.
+    minimize: false,
   },
   plugins: [
     new UserScriptMetaDataPlugin({

@@ -22,6 +22,9 @@ because Tampermonkey don't read it from dist every times.
 
 livereload is default enabled, use [this chrome extension](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)
 
+You will also see a `index.debug.user.js` file,
+this is a development usage file with `eval-source-map` for better browser error message.
+
 ## TypeScript
 
 use typescript as normal, see [example](src/index.ts)
@@ -44,7 +47,7 @@ just install a package and import it in your js file. webpack will pack them wit
 npm run build
 ```
 
-`dist/index.prod.user.js` is the finally script. you can manually copy it to greaskfork for deploy.
+`dist/index.prod.user.js` is the final script. you can manually copy it to greaskfork for deploy.
 
 ### minify
 
