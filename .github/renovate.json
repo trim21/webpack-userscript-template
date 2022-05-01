@@ -17,10 +17,5 @@
   ],
   "separateMajorMinor": false,
   "updateNotScheduled": false,
-  "packageRules": [
-    {
-      "matchPackageNames": ["axios"]
-    }
-  ],
   "rangeStrategy": "bump"
 }
