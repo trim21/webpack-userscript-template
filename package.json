@@ -30,7 +30,7 @@
     "@types/greasemonkey": "^4.0.3",
     "@types/jquery": "^3.5.14",
     "babel-loader": "^8.2.5",
-    "browserslist": "^4.20.3",
+    "browserslist": "^4.20.4",
     "css-loader": "^6.7.1",
     "less": "^4.1.2",
     "less-loader": "^11.0.0",
