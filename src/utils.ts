@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
+// https://github.com/Trim21/axios-userscript-adapter
 import adapter from 'axios-userscript-adapter'
 
 export function get<T = any, R = AxiosResponse<T>> (url: string, config?: Exclude<Partial<AxiosRequestConfig>, 'adapter'>): Promise<R> {

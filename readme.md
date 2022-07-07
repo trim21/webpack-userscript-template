@@ -26,6 +26,14 @@ livereload is default enabled, use [this Chrome extension](https://chrome.google
 You will also see a `index.debug.user.js` file in `dist` directory,
 this is a development usage file with `eval-source-map` for better browser error message.
 
+## Cross Site Request
+
+you can call `GM.xmlHttpRequest`,
+
+if you prefer `fetch` API, you can use <https://github.com/Trim21/gm-fetch>
+
+If you are using axios, you can checkout <https://github.com/Trim21/axios-userscript-adapter>
+
 ## TypeScript
 
 use typescript as normal, see [example](src/index.ts)
