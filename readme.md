@@ -32,7 +32,9 @@ you can call `GM.xmlHttpRequest`,
 
 if you prefer `fetch` API, you can use <https://github.com/Trim21/gm-fetch>
 
-If you are using axios, you can checkout <https://github.com/Trim21/axios-userscript-adapter>
+If you are using axios, you can use <https://github.com/Trim21/axios-userscript-adapter>
+
+(these libraries are both included already)
 
 ## TypeScript
 
