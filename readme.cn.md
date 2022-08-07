@@ -34,7 +34,7 @@ livereload 默认启用。在浏览器中进行自动刷新需要 [这个 chrome
 
 在 [metadata 的 require 部分](./config/metadata.cjs#L13-L17) 中修改你引入的依赖。然后在 [config/webpack.config.base.cjs](./config/webpack.config.base.cjs#L21-L25) 的`exclude`配置中里面把他们排除。
 
-### 跟以往的 WebPack 一样
+### 跟以往的 webpack 一样
 
 直接使用 npm 安装，然后什么都不用管。
 
