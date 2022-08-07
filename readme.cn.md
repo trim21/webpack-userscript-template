@@ -7,21 +7,21 @@
 1. 允许 Tampermonkey 访问文件网址 `右键插件图标`-`插件管理页面`-`访问文件网址` 或者参照[官方 faq](https://tampermonkey.net/faq.php?ext=dhdg#Q204)
 2. 使用 `npm ci` or `npm i` 安装依赖。
 3. `npm run dev` 来进行自动编译。
-4. 在浏览器中打开 `webpack-userscript-template/dist/index.dev.user.js` ，使用 Userscript manager 安装脚本。
 
-被安装的用户脚本包含`// @require file://path/to/dist/index.prod.user.js`,
-所以在每次加载的时候会运行 `index.prod.user.js`。
-`index.prod.user.js`是 webpack 以[src/index.ts](./src/index.ts)作为入口打包出来的完整的 userscript。
+在 `dist/` 文件夹会生成两个文件
 
-每次你修改了你的[metadata](./config/metadata.cjs)，你需要重新安装`index.dev.user.js`。
+- `dist/index.dev.user.js`: **请在浏览器中安装这个油猴脚本** 这个文件不包含有意义的js脚本，只是让 Tampermonkey 每次都能加载最新的 `dist/index.debug.user.js` .
+- `dist/index.debug.user.js`: 这是在 webpack 中启用了 `eval-source-map`  选项之后的打包产物。**不要在浏览器中安装这个脚本**。
+
 
 6. 修改 [src/index.ts](./src/index.ts) 。如果你需要的话你可以引入 css 或者 less 文件。你也可以通过设置 webpack 来引入 scss。
 7. 在 <https://www.example.com/> 并且打开控制台，你可以看到用户脚本被运行。
 
 livereload 默认启用。在浏览器中进行自动刷新需要 [这个 chrome 插件](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)
 
-在 `dist` 目录中同样会生成 `index.debug.user.js` 文件，
-这个文件在设置了`eval-source-map`，用于在开发过程中可以报告正确的错误行号。
+### 注意
+
+每次你修改了你的[metadata](./config/metadata.cjs)，你需要重新安装`index.dev.user.js`。
 
 ## TypeScript
 
