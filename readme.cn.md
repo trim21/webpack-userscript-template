@@ -26,6 +26,10 @@ livereload 默认启用。在浏览器中进行自动刷新需要 [这个 chrome
 
 已经设置好了`ts-loader`，可以直接 typescript。[example](src/index.ts)
 
+## 跨域请求
+
+https://github.com/Trim21/webpack-userscript-template/blob/master/src/index.ts
+
 ## 使用依赖
 
 有两个办法引入依赖。
