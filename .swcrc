@@ -3,8 +3,9 @@
   "env": {
     "targets": [
       "chrome >= 90",
+      "edge >= 90",
       "firefox >= 90",
-      "safari >= 11"
+      "safari >= 14"
     ]
   },
   "jsc": {
