@@ -13,5 +13,10 @@
     },
     "target": "es2020"
   },
+  "module": {
+    "type": "es6",
+    "strict": true,
+    "noInterop": true
+  },
   "minify": false
 }
