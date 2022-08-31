@@ -7,9 +7,8 @@
     "email": "trim21me@gmail.com"
   },
   "browserslist": [
-    "> 1%",
-    "not IE 11",
-    "not dead"
+    "chrome >= 80",
+    "safari >= 11"
   ],
   "scripts": {
     "postversion": "git push --follow-tags",
