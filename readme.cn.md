@@ -10,8 +10,8 @@
 
 在 `dist/` 文件夹会生成两个文件
 
-- `dist/index.dev.user.js`: **请在浏览器中安装这个油猴脚本** 这个文件不包含有意义的js脚本，但是包含了全部的元数据和额外的 `@require file://.../dist/index.debug.user.js`。
-- `dist/index.debug.user.js`: 这是在 webpack 中启用了 `eval-source-map` 选项之后的打包产物。**不要在浏览器中安装这个脚本**。
+-   `dist/index.dev.user.js`: **请在浏览器中安装这个油猴脚本** 这个文件不包含有意义的 js 脚本，但是包含了全部的元数据和额外的 `@require file://.../dist/index.debug.user.js`。
+-   `dist/index.debug.user.js`: 这是在 webpack 中启用了 `eval-source-map` 选项之后的打包产物。**不要在浏览器中安装这个脚本**。
 
 4. 修改 [src/index.ts](./src/index.ts) 。如果你需要的话你可以引入 css 或者 less 文件。你也可以通过设置 webpack 来引入 scss。
 5. 在 <https://www.example.com/> 并且打开控制台，你可以看到用户脚本被运行。
