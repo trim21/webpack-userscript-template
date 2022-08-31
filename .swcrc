@@ -1,11 +1,17 @@
 {
-    "$schema": "https://json.schemastore.org/swcrc",
-    "jsc": {
-        "parser": {
-            "syntax": "typescript",
-            "dynamicImport": false
-        },
-        "target": "es2020"
+  "$schema": "https://json.schemastore.org/swcrc",
+  "env": {
+    "targets": [
+      "chrome >= 80",
+      "safari >= 11"
+    ]
+  },
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "dynamicImport": false
     },
-    "minify": false
+    "target": "es2020"
+  },
+  "minify": false
 }

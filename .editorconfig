@@ -10,6 +10,6 @@ indent_size=4
 indent_style=space
 indent_size=2
 
-[{*.js,*.vue,*.ts,*.cjs}]
+[{*.js,*.vue,*.ts,*.cjs,.swcrc}]
 indent_style=space
 indent_size=2
