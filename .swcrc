@@ -2,7 +2,8 @@
   "$schema": "https://json.schemastore.org/swcrc",
   "env": {
     "targets": [
-      "chrome >= 80",
+      "chrome >= 90",
+      "firefox >= 90",
       "safari >= 11"
     ]
   },
@@ -11,7 +12,7 @@
       "syntax": "typescript",
       "dynamicImport": false
     },
-    "target": "es2020"
+    "target": "es2022"
   },
   "module": {
     "type": "es6",
