@@ -13,8 +13,8 @@ module.exports = {
   source: repository.url,
   // 'license': 'MIT',
   match: [
-    "https://www.example.com/*",
-    "https://example.com/*",
+    "https?://www.example.com/*",
+    "https?://example.com/*",
   ],
   require: [
     `https://cdn.jsdelivr.net/npm/jquery@${dependencies.jquery}/dist/jquery.min.js`,
