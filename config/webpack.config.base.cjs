@@ -1,6 +1,6 @@
 const path = require("path");
 
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const {BundleAnalyzerPlugin} = require("webpack-bundle-analyzer");
 
 const webpackConfig = {
   resolve: {
@@ -25,7 +25,12 @@ const webpackConfig = {
       {
         test: /\.([tj])s$/,
         use: {
-          loader: "swc-loader",
+          loader: "esbuild-loader",
+          options: {
+            loader: "ts",
+            target: "chrome100",
+            charset: "utf8",
+          },
         },
       },
       {
