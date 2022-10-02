@@ -12,8 +12,8 @@ Just [use this git repo as a template](https://github.com/Trim21/webpack-userscr
 
 Now you will see 2 files in `./dist/`
 
--   `dist/index.dev.user.js`: **You should install this userscript in your browser.** It's a simple loader that load `dist/index.debug.user.js` on matched web page.
--   `dist/index.debug.user.js`: This is the development build with `eval-source-map`. It will be automatically loaded by `dist/index.dev.user.js` via `@require file://.../dist/index.debug.user.js` metadata, **Don't add it to your userscript manager.**
+-   `dist/index.dev.user.js`: **You should install this userscript in your browser.** It's a simple loader that load `dist/index.debug.js` on matched web page.
+-   `dist/index.debug.js`: This is the development build with `eval-source-map`. It will be automatically loaded by `dist/index.dev.user.js` via `@require file://.../dist/index.debug.js` metadata, **Don't add it to your userscript manager.**
 
 4. edit [src/index.ts](./src/index.ts), you can even import css or less files. You can use scss if you like.
 5. go wo <https://www.example.com/> and open console, you'll see it's working.

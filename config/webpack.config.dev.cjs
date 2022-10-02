@@ -13,10 +13,10 @@ metadata.require.push(
 const cfg = merge(webpackConfig, {
   entry: {
     debug: webpackConfig.entry,
-    dev: path.resolve(__dirname, "./empty.cjs"),
+    'dev.user': path.resolve(__dirname, "./empty.cjs"),
   },
   output: {
-    filename: "index.[name].user.js",
+    filename: "index.[name].js",
     path: path.resolve(__dirname, "../dist"),
   },
   devtool: "eval-source-map",
