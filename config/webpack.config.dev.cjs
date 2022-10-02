@@ -11,9 +11,13 @@ metadata.require.push(
 );
 
 const cfg = merge(webpackConfig, {
+  cache: {
+    type: "filesystem",
+    name: "dev",
+  },
   entry: {
     debug: webpackConfig.entry,
-    'dev.user': path.resolve(__dirname, "./empty.cjs"),
+    "dev.user": path.resolve(__dirname, "./empty.cjs"),
   },
   output: {
     filename: "index.[name].js",

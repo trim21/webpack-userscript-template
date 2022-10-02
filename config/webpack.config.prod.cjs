@@ -14,6 +14,10 @@ const cfg = merge(webpackConfig, {
     // to keep userscript meta.
     minimize: false,
   },
+  cache: {
+    type: "filesystem",
+    name: "prod",
+  },
   plugins: [
     new UserScriptMetaDataPlugin({
       metadata,

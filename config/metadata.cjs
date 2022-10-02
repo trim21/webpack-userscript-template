@@ -12,10 +12,7 @@ module.exports = {
   author: author,
   source: repository.url,
   // 'license': 'MIT',
-  match: [
-    "*://www.example.com/",
-    "*://example.com/*",
-  ],
+  match: ["*://www.example.com/", "*://example.com/*"],
   require: [
     `https://cdn.jsdelivr.net/npm/jquery@${dependencies.jquery}/dist/jquery.min.js`,
     `https://cdn.jsdelivr.net/npm/axios@${dependencies.axios}/dist/axios.min.js`,
