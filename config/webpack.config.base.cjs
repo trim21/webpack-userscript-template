@@ -17,8 +17,6 @@ const webpackConfig = {
   target: "web",
   externals: {
     jquery: "$",
-    axios: "axios",
-    "axios-userscript-adapter": "axiosGmxhrAdapter",
   },
   module: {
     rules: [
