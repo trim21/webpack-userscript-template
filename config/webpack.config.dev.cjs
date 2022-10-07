@@ -11,6 +11,7 @@ metadata.require.push(
 );
 
 const cfg = merge(webpackConfig, {
+  mode: "development",
   cache: {
     type: "filesystem",
     name: "dev",

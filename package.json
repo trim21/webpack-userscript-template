@@ -10,8 +10,8 @@
     "postversion": "git push --follow-tags",
     "format": "prettier -w ./",
     "analize": "npm_config_report=true npm run build",
-    "build": "webpack --mode production --config config/webpack.config.prod.cjs",
-    "dev": "webpack --mode development --config config/webpack.config.dev.cjs"
+    "build": "webpack --config config/webpack.config.prod.cjs",
+    "dev": "webpack --config config/webpack.config.dev.cjs"
   },
   "repository": {
     "type": "git",
