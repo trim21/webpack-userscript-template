@@ -15,8 +15,6 @@ module.exports = {
   match: ["*://www.example.com/", "*://example.com/*"],
   require: [
     `https://cdn.jsdelivr.net/npm/jquery@${dependencies.jquery}/dist/jquery.min.js`,
-    `https://cdn.jsdelivr.net/npm/axios@${dependencies.axios}/dist/axios.min.js`,
-    `https://cdn.jsdelivr.net/npm/axios-userscript-adapter@${dependencies["axios-userscript-adapter"]}/dist/axiosGmxhrAdapter.min.js`,
   ],
   grant: ["GM.xmlHttpRequest"],
   connect: ["httpbin.org"],
