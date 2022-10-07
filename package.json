@@ -7,7 +7,6 @@
     "email": "trim21me@gmail.com"
   },
   "scripts": {
-    "postversion": "git push --follow-tags",
     "format": "prettier -w ./",
     "analize": "cross-env npm_config_report=true npm run build",
     "build": "webpack --config config/webpack.config.prod.cjs",
