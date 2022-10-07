@@ -9,7 +9,7 @@
   "scripts": {
     "postversion": "git push --follow-tags",
     "format": "prettier -w ./",
-    "analize": "npm_config_report=true npm run build",
+    "analize": "cross-env npm_config_report=true npm run build",
     "build": "webpack --config config/webpack.config.prod.cjs",
     "dev": "webpack --config config/webpack.config.dev.cjs"
   },
@@ -26,6 +26,7 @@
     "@types/greasemonkey": "^4.0.4",
     "@types/jquery": "^3.5.14",
     "browserslist": "^4.21.4",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "esbuild": "^0.15.10",
     "esbuild-loader": "^2.20.0",
