@@ -27,13 +27,7 @@ you'll have to restart webpack server and install newly generated `dist/index.de
 
 ## Cross Site Request
 
-you can call `GM.xmlHttpRequest`,
-
-if you prefer `fetch` API, you can use <https://github.com/Trim21/gm-fetch>
-
-If you are using axios, you can use <https://github.com/Trim21/axios-userscript-adapter>
-
-(these libraries are both included already)
+you can call `GM.xmlHttpRequest` directly or use a fetch API based on `GM.xmlHttpRequest` <https://github.com/Trim21/gm-fetch>
 
 ## TypeScript
 
