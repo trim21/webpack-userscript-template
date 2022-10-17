@@ -43,7 +43,7 @@ like original UserScript way, you will need to add them to your [user script met
 
 ### Webpack way
 
-just install a package and import it in your js file. webpack will pack them with in your final production js file.
+just install packages with npm and import them in your code, webpack will take care them.
 
 ## Build
 
