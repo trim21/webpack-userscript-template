@@ -21,7 +21,7 @@ const webpackConfig = {
   module: {
     rules: [
       {
-        test: /\.([tj])s$/,
+        test: /\.m?[tj]s$/,
         use: {
           loader: "esbuild-loader",
           options: {
