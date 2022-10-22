@@ -44,52 +44,74 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background-color: yellow;\n 
 /***/ ((module) => {
 
 
-module.exports = function(cssWithMappingToString) {
-  var list = [];
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
   list.toString = function toString() {
-    return this.map(function(item) {
+    return this.map(function (item) {
       var content = "";
       var needLayer = typeof item[5] !== "undefined";
+
       if (item[4]) {
         content += "@supports (".concat(item[4], ") {");
       }
+
       if (item[2]) {
         content += "@media ".concat(item[2], " {");
       }
+
       if (needLayer) {
         content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
       }
+
       content += cssWithMappingToString(item);
+
       if (needLayer) {
         content += "}";
       }
+
       if (item[2]) {
         content += "}";
       }
+
       if (item[4]) {
         content += "}";
       }
+
       return content;
     }).join("");
-  };
+  }; // import a list of modules into the list
+
+
   list.i = function i(modules, media, dedupe, supports, layer) {
     if (typeof modules === "string") {
-      modules = [[null, modules, void 0]];
+      modules = [[null, modules, undefined]];
     }
+
     var alreadyImportedModules = {};
+
     if (dedupe) {
       for (var k = 0; k < this.length; k++) {
         var id = this[k][0];
+
         if (id != null) {
           alreadyImportedModules[id] = true;
         }
       }
     }
+
     for (var _k = 0; _k < modules.length; _k++) {
       var item = [].concat(modules[_k]);
+
       if (dedupe && alreadyImportedModules[item[0]]) {
         continue;
       }
+
       if (typeof layer !== "undefined") {
         if (typeof item[5] === "undefined") {
           item[5] = layer;
@@ -98,6 +120,7 @@ module.exports = function(cssWithMappingToString) {
           item[5] = layer;
         }
       }
+
       if (media) {
         if (!item[2]) {
           item[2] = media;
@@ -106,6 +129,7 @@ module.exports = function(cssWithMappingToString) {
           item[2] = media;
         }
       }
+
       if (supports) {
         if (!item[4]) {
           item[4] = "".concat(supports);
@@ -114,12 +138,13 @@ module.exports = function(cssWithMappingToString) {
           item[4] = supports;
         }
       }
+
       list.push(item);
     }
   };
+
   return list;
 };
-
 
 /***/ }),
 
@@ -127,10 +152,10 @@ module.exports = function(cssWithMappingToString) {
 /***/ ((module) => {
 
 
-module.exports = function(i) {
+
+module.exports = function (i) {
   return i[1];
 };
-
 
 /***/ }),
 
@@ -539,75 +564,82 @@ var update = injectStylesIntoStyleTag_default()(main/* default */.Z, options);
 
 ;// CONCATENATED MODULE: ./node_modules/@trim21/gm-fetch/dist/index.mjs
 async function GM_fetch(input, init) {
-  const request = new Request(input, init);
-  let data;
-  if (init?.body) {
-    data = await request.text();
-  }
-  return await XHR(request, data);
+    const request = new Request(input, init);
+    let data;
+    if (init?.body) {
+        data = await request.text();
+    }
+    return await XHR(request, data);
 }
 function XHR(request, data) {
-  return new Promise((resolve, reject) => {
-    GM.xmlHttpRequest({
-      url: request.url,
-      method: gmXHRMethod(request.method.toUpperCase()),
-      headers: toGmHeaders(request.headers),
-      data,
-      onload: (res) => resolve(parseGMResponse(res)),
-      onerror: (err) => reject(new TypeError("Failed to fetch: " + err.finalUrl))
+    return new Promise((resolve, reject) => {
+        GM.xmlHttpRequest({
+            url: request.url,
+            method: gmXHRMethod(request.method.toUpperCase()),
+            headers: toGmHeaders(request.headers),
+            data: data,
+            onload: (res) => resolve(parseGMResponse(res)),
+            onerror: (err) => reject(new TypeError("Failed to fetch: " + err.finalUrl)),
+        });
     });
-  });
 }
 function parseGMResponse(res) {
-  return new Response(res.responseText, {
-    statusText: res.statusText,
-    status: res.status,
-    headers: parseRawHeaders(res.responseHeaders)
-  });
+    return new Response(res.responseText, {
+        statusText: res.statusText,
+        status: res.status,
+        headers: parseRawHeaders(res.responseHeaders),
+    });
 }
 const httpMethods = ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "TRACE", "OPTIONS", "CONNECT"];
+// a ts type helper to narrow type
 function includes(array, element) {
-  return array.includes(element);
+    return array.includes(element);
 }
 function gmXHRMethod(method) {
-  if (includes(httpMethods, method)) {
-    return method;
-  }
-  throw new Error(`unsupported http method ${method}`);
+    if (includes(httpMethods, method)) {
+        return method;
+    }
+    throw new Error(`unsupported http method ${method}`);
 }
 function toGmHeaders(h) {
-  if (!h) {
-    return void 0;
-  }
-  const t = {};
-  h.forEach((value, key) => {
-    t[value] = key;
-  });
-  return t;
+    if (!h) {
+        return undefined;
+    }
+    const t = {};
+    h.forEach((value, key) => {
+        t[value] = key;
+    });
+    return t;
 }
 function parseRawHeaders(h) {
-  const array = h.trim().split("\r\n").map((value) => {
-    let s = value.split(": ");
-    return [s[0], s[1]];
-  });
-  return new Headers(array);
+    const array = h
+        .trim()
+        .split("\r\n")
+        .map((value) => {
+        let s = value.split(": ");
+        return [s[0], s[1]];
+    });
+    return new Headers(array);
 }
+
 
 
 ;// CONCATENATED MODULE: ./src/index.ts
 
+//checkout homepage https://github.com/Trim21/gm-fetch for @trim21/gm-fetch
 
 async function src_main() {
-  console.log("script start");
-  console.log(`uuid: ${await fetchExample()}`);
+    console.log("script start");
+    // cross domain requests
+    console.log(`uuid: ${await fetchExample()}`);
 }
 async function fetchExample() {
-  const res = await GM_fetch("https://httpbin.org/uuid");
-  const data = await res.json();
-  return data.uuid;
+    const res = await GM_fetch("https://httpbin.org/uuid");
+    const data = await res.json();
+    return data.uuid;
 }
 src_main().catch((e) => {
-  console.log(e);
+    console.log(e);
 });
 
 })();
