@@ -69,7 +69,6 @@ If you don't need to deploy your script to greaskfork, enable minify as you like
 
 You can auto use greasyfork's auto update function.
 
-
 ## Q&A
 
 you may find enabling source map not working well in production code, because Tampermonkey will add extra lines (all your `@require`) before your script. I don't know if there is a good fix for this, You need to use webpack config `devtool` with `eval` prefix to make it work as expected, so source map is disabled in this template.

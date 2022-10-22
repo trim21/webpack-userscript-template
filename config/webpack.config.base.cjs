@@ -21,14 +21,9 @@ const webpackConfig = {
   module: {
     rules: [
       {
-        test: /\.m?[tj]s$/,
+        test: /\.m?ts$/,
         use: {
-          loader: "esbuild-loader",
-          options: {
-            loader: "ts",
-            target: "chrome100",
-            charset: "utf8",
-          },
+          loader: "ts-loader",
         },
       },
       {

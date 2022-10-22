@@ -10,7 +10,9 @@
     "format": "prettier -w ./",
     "analize": "cross-env npm_config_report=true npm run build",
     "build": "webpack --config config/webpack.config.prod.cjs",
-    "dev": "webpack --config config/webpack.config.dev.cjs"
+    "dev": "webpack --config config/webpack.config.dev.cjs",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,11 @@
     "@trim21/gm-fetch": "^0.1.6",
     "jquery": "^3.6.1"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "prettier --ignore-path ./.prettierignore --write "
+    ]
+  },
   "devDependencies": {
     "@types/greasemonkey": "^4.0.4",
     "@types/jquery": "^3.5.14",
@@ -28,14 +35,15 @@
     "browserslist": "^4.21.4",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
-    "esbuild": "^0.15.12",
-    "esbuild-loader": "^2.20.0",
+    "husky": "^8.0.1",
     "less": "^4.1.3",
     "less-loader": "^11.1.0",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.1",
     "typescript": "^4.8.4",
-    "userscript-metadata-webpack-plugin": "^0.2.7",
+    "userscript-metadata-webpack-plugin": "^0.2.8",
     "webpack": "^5.74.0",
     "webpack-bundle-analyzer": "^4.6.1",
     "webpack-cli": "^4.10.0",

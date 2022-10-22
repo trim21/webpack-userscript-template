@@ -8,8 +8,8 @@ const {
 module.exports = {
   name: {
     "": "webpack-userscript-template",
-    "cn": "中文名",
-    "en": "english name",
+    cn: "中文名",
+    en: "english name",
   },
   namespace: "https://trim21.me/",
   version: version,
