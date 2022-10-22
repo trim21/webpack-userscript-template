@@ -1,5 +1,7 @@
 // ==UserScript==
 // @name        webpack-userscript-template
+// @name:cn     中文名
+// @name:en     english name
 // @namespace   https://trim21.me/
 // @version     0.0.0
 // @author      Trim21 <trim21me@gmail.com>
