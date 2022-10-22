@@ -7,7 +7,7 @@ const metadata = require("./metadata.cjs");
 const webpackConfig = require("./webpack.config.base.cjs");
 
 metadata.require.push(
-  "file://" + path.resolve(__dirname, "../dist/index.debug.user.js")
+  "file://" + path.resolve(__dirname, "../dist/index.debug.js")
 );
 
 const cfg = merge(webpackConfig, {
