@@ -30,6 +30,7 @@ you'll have to restart webpack server and install newly generated `dist/index.de
 If you prefer some other bundler like rollup, you may use part of some of these packages.
 
 [userscript-metadata-generator](https://github.com/trim21/userscript-metadata-generator)
+
 [gm-fetch](https://github.com/trim21/gm-fetch)
 
 [userscript-metadata-webpack-plugin](https://github.com/trim21/userscript-metadata-webpack-plugin)
