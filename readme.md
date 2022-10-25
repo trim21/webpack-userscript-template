@@ -25,6 +25,16 @@ livereload is default enabled, use [this Chrome extension](https://chrome.google
 Everytime you change your metadata config,
 you'll have to restart webpack server and install newly generated `dist/index.dev.user.js` UserScript in your browser again.
 
+## used package
+
+If you prefer some other bundler like rollup, you may use part of some of these packages.
+
+[userscript-metadata-generator](https://github.com/trim21/userscript-metadata-generator)
+[gm-fetch](https://github.com/trim21/gm-fetch)
+
+[userscript-metadata-webpack-plugin](https://github.com/trim21/userscript-metadata-webpack-plugin)
+
+
 ## Cross Site Request
 
 you can call `GM.xmlHttpRequest` directly or use a fetch API based on `GM.xmlHttpRequest` <https://github.com/Trim21/gm-fetch>
