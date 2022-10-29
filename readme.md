@@ -62,13 +62,13 @@ just install packages with npm and import them in your code, webpack will take c
 npm run build
 ```
 
-`dist/index.prod.user.js` is the final script. you can manually copy it to greaskfork for deploy.
+`dist/index.prod.user.js` is the final script. you can manually copy it to greasyfork for deploy.
 
 ### Minify
 
 There is a [limitation in greasyfork](https://greasyfork.org/en/help/code-rules), your code must not be obfuscated or minified.
 
-If you don't need to deploy your script to greaskfork, enable minify as you like.
+If you don't need to deploy your script to greasyfork, enable minify as you like.
 
 ## automatically Deploy
 
