@@ -20,10 +20,6 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - run: |
-          sudo apt-get install tree -y
-          tree -H '.' -L 1 --noreport --charset utf-8 ./dist | tee dist/index.html
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
