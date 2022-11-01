@@ -27,5 +27,6 @@ jobs:
           publish_dir: ./dist
           publish_branch: preview-dist
           commit_message: deploy ${{ github.ref }}
+          enable_jekyll: true
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
