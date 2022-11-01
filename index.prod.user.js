@@ -3,7 +3,7 @@
 // @name:cn     中文名
 // @name:en     english name
 // @namespace   https://trim21.me/
-// @version     0.0.0
+// @version     0.0.1
 // @author      Trim21 <trim21me@gmail.com>
 // @source      https://github.com/trim21/webpack-userscript-template
 // @match       *://www.example.com/
