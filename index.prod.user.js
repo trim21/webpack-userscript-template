@@ -546,6 +546,29 @@ var update = injectStylesIntoStyleTag_default()(main/* default */.Z, options);
        /* harmony default export */ const style_main = (main/* default */.Z && main/* default.locals */.Z.locals ? main/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./node_modules/@trim21/gm-fetch/dist/index.mjs
+function parseRawHeaders(h) {
+    const s = h.trim();
+    if (!s) {
+        return new Headers();
+    }
+    const array = s.split("\r\n").map((value) => {
+        let s = value.split(":");
+        return [s[0].trim(), s[1].trim()];
+    });
+    return new Headers(array);
+}
+function parseGMResponse(res) {
+    const r = new Response(res.response, {
+        statusText: res.statusText,
+        status: res.status,
+        headers: parseRawHeaders(res.responseHeaders),
+    });
+    Object.defineProperty(r, "url", {
+        value: res.finalUrl,
+    });
+    return r;
+}
+
 async function GM_fetch(input, init) {
     const request = new Request(input, init);
     let data;
@@ -556,21 +579,28 @@ async function GM_fetch(input, init) {
 }
 function XHR(request, data) {
     return new Promise((resolve, reject) => {
+        if (request.signal && request.signal.aborted) {
+            return reject(new DOMException("Aborted", "AbortError"));
+        }
         GM.xmlHttpRequest({
             url: request.url,
             method: gmXHRMethod(request.method.toUpperCase()),
             headers: toGmHeaders(request.headers),
             data: data,
-            onload: (res) => resolve(parseGMResponse(res)),
-            onerror: (err) => reject(new TypeError("Failed to fetch: " + err.finalUrl)),
+            responseType: "blob",
+            onload(res) {
+                resolve(parseGMResponse(res));
+            },
+            onabort() {
+                reject(new DOMException("Aborted", "AbortError"));
+            },
+            ontimeout() {
+                reject(new TypeError("Network request failed, timeout"));
+            },
+            onerror(err) {
+                reject(new TypeError("Failed to fetch: " + err.finalUrl));
+            },
         });
-    });
-}
-function parseGMResponse(res) {
-    return new Response(res.responseText, {
-        statusText: res.statusText,
-        status: res.status,
-        headers: parseRawHeaders(res.responseHeaders),
     });
 }
 const httpMethods = ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "TRACE", "OPTIONS", "CONNECT"];
@@ -594,18 +624,9 @@ function toGmHeaders(h) {
     });
     return t;
 }
-function parseRawHeaders(h) {
-    const array = h
-        .trim()
-        .split("\r\n")
-        .map((value) => {
-        let s = value.split(": ");
-        return [s[0], s[1]];
-    });
-    return new Headers(array);
-}
 
 
+//# sourceMappingURL=index.mjs.map
 
 ;// CONCATENATED MODULE: ./src/index.ts
 
