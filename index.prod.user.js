@@ -8,7 +8,7 @@
 // @source      https://github.com/trim21/webpack-userscript-template
 // @match       *://www.example.com/
 // @match       *://example.com/*
-// @require     https://cdn.jsdelivr.net/npm/jquery@^3.6.1/dist/jquery.min.js
+// @require     https://cdn.jsdelivr.net/npm/jquery@^3.6.3/dist/jquery.min.js
 // @grant       GM.xmlHttpRequest
 // @connect     httpbin.org
 // @run-at      document-end
