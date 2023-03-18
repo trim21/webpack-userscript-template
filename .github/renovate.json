@@ -1,5 +1,8 @@
 {
-  "extends": ["schedule:monthly", ":masterIssue", "config:base"],
+  "extends": [
+    "local>tim21/renovate-config",
+    "schedule:monthly"
+  ],
   "prHourlyLimit": 0,
   "lockFileMaintenance": {
     "extends": ["schedule:weekly"],
