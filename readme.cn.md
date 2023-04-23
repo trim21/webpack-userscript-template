@@ -50,6 +50,14 @@ npm run build
 
 `dist/index.prod.user.js` 就是最终打包出来的 UserScript。
 
+## 使用其他打包器
+
+如果你习惯使用 Vite/rollup/esbuild 等打包器，你也可以直接使用以下这几个包来构建你的用户脚本：
+
+[gm-fetch](https://github.com/trim21/gm-fetch)
+
+[userscript-metadata-generator](https://github.com/trim21/userscript-metadata-generator)
+
 ## deploy
 
 [github actions](./.github/workflows/nodejs.yml#L68) 会自动在每个 tag 把`dist/index.prod.user.js`部属到`gh-pages`分支的根目录去。
