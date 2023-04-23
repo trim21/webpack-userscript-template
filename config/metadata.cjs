@@ -7,7 +7,7 @@ const {
 
 module.exports = {
   name: {
-    "": "webpack-userscript-template",
+    $: "webpack-userscript-template",
     cn: "中文名",
     en: "english name",
   },
