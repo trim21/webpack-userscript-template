@@ -27,7 +27,7 @@ you'll have to restart webpack server and install newly generated `dist/index.de
 
 ## used package
 
-If you prefer some other bundler like rollup, you may use part of some of these packages.
+If you prefer some other bundler like rollup, you may can use some of these packages directly.
 
 [userscript-metadata-generator](https://github.com/trim21/userscript-metadata-generator)
 
