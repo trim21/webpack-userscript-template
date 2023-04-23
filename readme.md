@@ -35,7 +35,6 @@ If you prefer some other bundler like rollup, you may use part of some of these 
 
 [userscript-metadata-webpack-plugin](https://github.com/trim21/userscript-metadata-webpack-plugin)
 
-
 ## Cross Site Request
 
 you can call `GM.xmlHttpRequest` directly or use a fetch API based on `GM.xmlHttpRequest` <https://github.com/Trim21/gm-fetch>

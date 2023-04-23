@@ -1,5 +1,7 @@
 const { merge } = require("webpack-merge");
-const UserScriptMetaDataPlugin = require("userscript-metadata-webpack-plugin");
+const {
+  UserScriptMetaDataPlugin,
+} = require("userscript-metadata-webpack-plugin");
 
 const metadata = require("./metadata.cjs");
 const webpackConfig = require("./webpack.config.base.cjs");
