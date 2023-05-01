@@ -6,6 +6,7 @@
     "automerge": true,
     "enabled": true
   },
+  "automerge": true,
   "postUpdateOptions": ["npmDedupe"],
   "separateMajorMinor": false,
   "updateNotScheduled": false,
