@@ -21,7 +21,7 @@
   "private": true,
   "dependencies": {
     "@trim21/gm-fetch": "^0.1.15",
-    "jquery": "^3.7.0"
+    "jquery": "^3.7.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json}": [
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/greasemonkey": "^4.0.5",
-    "@types/jquery": "^3.5.16",
+    "@types/jquery": "^3.5.20",
     "@types/node": "^18.17.12",
     "browserslist": "^4.21.10",
     "cross-env": "^7.0.3",
