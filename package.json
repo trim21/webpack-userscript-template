@@ -41,7 +41,7 @@
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "style-loader": "^3.3.3",
-    "ts-loader": "^9.4.4",
+    "ts-loader": "^9.5.0",
     "typescript": "^5.2.2",
     "userscript-metadata-webpack-plugin": "^0.4.0",
     "webpack": "^5.88.2",
