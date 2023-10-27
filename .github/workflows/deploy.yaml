@@ -1,3 +1,4 @@
+# build latest v* tag and upload dist diectory to gh-pages branch.
 name: deploy
 
 on:
