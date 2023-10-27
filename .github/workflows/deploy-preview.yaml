@@ -1,3 +1,6 @@
+# this workflow build from master branch and upload final userscript file to "preview-dist" branch
+# remove this if you don't need it.
+
 name: deploy-preview
 
 on:
