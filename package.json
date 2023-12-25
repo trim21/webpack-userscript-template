@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/greasemonkey": "^4.0.7",
-    "@types/jquery": "^3.5.22",
+    "@types/jquery": "^3.5.29",
     "@types/node": "^20.8.10",
     "browserslist": "^4.22.1",
     "cross-env": "^7.0.3",
