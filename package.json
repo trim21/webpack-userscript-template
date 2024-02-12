@@ -32,7 +32,7 @@
     "@types/greasemonkey": "^4.0.7",
     "@types/jquery": "^3.5.29",
     "@types/node": "^20.11.5",
-    "browserslist": "^4.22.2",
+    "browserslist": "^4.22.3",
     "cross-env": "^7.0.3",
     "css-loader": "^6.10.0",
     "husky": "^8.0.3",
