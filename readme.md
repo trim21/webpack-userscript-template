@@ -75,7 +75,7 @@ If you don't need to deploy your script to greasyfork, enable minify as you like
 
 [example](https://github.com/Trim21/webpack-userscript-template/tree/gh-pages)
 
-[deployed](https://trim21.github.io/webpack-userscript-template/)
+[deployed](https://trim21.github.io/webpack-userscript-template/index.prod.user.js)
 
 You can auto use greasyfork's auto update function.
 
