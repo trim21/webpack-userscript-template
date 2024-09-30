@@ -479,7 +479,7 @@ var styleTagTransform = __webpack_require__("./node_modules/style-loader/dist/ru
 var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/style/main.less
 var main = __webpack_require__("./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/style/main.less");
-;// CONCATENATED MODULE: ./src/style/main.less
+;// ./src/style/main.less
 
       
       
@@ -506,7 +506,7 @@ var update = injectStylesIntoStyleTag_default()(main/* default */.A, options);
 
        /* harmony default export */ const style_main = (main/* default */.A && main/* default */.A.locals ? main/* default */.A.locals : undefined);
 
-;// CONCATENATED MODULE: ./node_modules/@trim21/gm-fetch/dist/index.mjs
+;// ./node_modules/@trim21/gm-fetch/dist/index.mjs
 function parseRawHeaders(h) {
     const s = h.trim();
     if (!s) {
@@ -663,7 +663,7 @@ function gmXHRMethod(method) {
 
 //# sourceMappingURL=index.mjs.map
 
-;// CONCATENATED MODULE: ./src/index.ts
+;// ./src/index.ts
 
 //checkout homepage https://github.com/Trim21/gm-fetch for @trim21/gm-fetch
 
