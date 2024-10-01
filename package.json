@@ -38,7 +38,7 @@
     "husky": "^9.1.5",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
-    "lint-staged": "^15.2.9",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
