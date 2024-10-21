@@ -531,7 +531,7 @@ class ResImpl {
     constructor(body, init) {
         this.rawBody = body;
         this.init = init;
-        this.body = toReadableStream(body);
+        this.body = body.stream();
         const { headers, statusCode, statusText, finalUrl, redirected } = init;
         this.headers = headers;
         this.status = statusCode;
@@ -604,14 +604,6 @@ function decode(body) {
         }
     });
     return form;
-}
-function toReadableStream(value) {
-    return new ReadableStream({
-        start(controller) {
-            controller.enqueue(value);
-            controller.close();
-        },
-    });
 }
 
 async function GM_fetch(input, init) {
