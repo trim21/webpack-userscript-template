@@ -35,7 +35,7 @@
     "browserslist": "^4.24.2",
     "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
     "lint-staged": "^15.2.10",
