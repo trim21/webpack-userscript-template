@@ -1,13 +1,21 @@
 {
-  "extends": ["schedule:monthly", ":masterIssue", "config:base"],
+  "extends": [
+    "schedule:monthly",
+    ":dependencyDashboard",
+    "config:recommended"
+  ],
   "prHourlyLimit": 0,
   "lockFileMaintenance": {
-    "extends": ["schedule:weekly"],
+    "extends": [
+      "schedule:weekly"
+    ],
     "automerge": true,
     "enabled": true
   },
   "automerge": true,
-  "postUpdateOptions": ["npmDedupe"],
+  "postUpdateOptions": [
+    "npmDedupe"
+  ],
   "separateMajorMinor": false,
   "updateNotScheduled": false,
   "rangeStrategy": "bump"
