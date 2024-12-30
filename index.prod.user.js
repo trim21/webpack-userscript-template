@@ -589,13 +589,6 @@ class ResImpl {
         this._bodyUsed = true;
         return this.rawBody.text();
     }
-    async bytes() {
-        if (this.bodyUsed) {
-            throw new TypeError("Failed to execute 'bytes' on 'Response': body stream already read");
-        }
-        this._bodyUsed = true;
-        return new Uint8Array(await this.rawBody.arrayBuffer());
-    }
 }
 function decode(body) {
     const form = new FormData();
