@@ -633,7 +633,12 @@ function XHR(request, init, data) {
             data: data,
             responseType: "blob",
             onload(res) {
-                resolve(parseGMResponse(request, res));
+                try {
+                    resolve(parseGMResponse(request, res));
+                }
+                catch (e) {
+                    reject(e);
+                }
             },
             onabort() {
                 reject(new DOMException("Aborted", "AbortError"));
