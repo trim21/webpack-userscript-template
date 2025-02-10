@@ -5,8 +5,10 @@ const {
   UserScriptMetaDataPlugin,
 } = require("userscript-metadata-webpack-plugin");
 
-const metadata = require("./metadata.cjs");
+const baseMetadata = require("./metadata.cjs");
 const webpackConfig = require("./webpack.config.base.cjs");
+
+const metadata = structuredClone(baseMetadata);
 
 metadata.require.push(
   "file://" + path.resolve(__dirname, "../dist/index.debug.js")
