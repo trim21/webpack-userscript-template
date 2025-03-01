@@ -519,10 +519,15 @@ function parseRawHeaders(h) {
     return new Headers(array);
 }
 function parseGMResponse(req, res) {
-    return new ResImpl(res.response, {
+    // workaround TamperMonkey bug(?) where sometimes response is string despite responseType being "blob"
+    const headers = parseRawHeaders(res.responseHeaders);
+    const body = typeof res.response === "string"
+        ? new Blob([res.response], { type: headers.get("Content-Type") || "text/plain" })
+        : res.response;
+    return new ResImpl(body, {
         statusCode: res.status,
         statusText: res.statusText,
-        headers: parseRawHeaders(res.responseHeaders),
+        headers,
         finalUrl: res.finalUrl,
         redirected: res.finalUrl === req.url,
     });
