@@ -49,6 +49,6 @@
     "webpack-cli": "^6.0.1",
     "webpack-livereload-plugin": "^3.0.2",
     "webpack-merge": "^6.0.1",
-    "webpack-sources": "^3.2.3"
+    "webpack-sources": "^3.3.3"
   }
 }
