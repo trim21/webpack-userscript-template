@@ -42,7 +42,7 @@
     "prettier": "^3.6.2",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.4",
-    "typescript": "^5.9.2",
+    "typescript": "^5.9.3",
     "userscript-metadata-webpack-plugin": "^0.4.2",
     "webpack": "^5.102.1",
     "webpack-bundle-analyzer": "^4.10.2",
