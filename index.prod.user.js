@@ -18,8 +18,8 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/style/main.less":
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/style/main.less"
+(module, __webpack_exports__, __webpack_require__) {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -42,10 +42,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
-/***/ }),
+/***/ },
 
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/***/ ((module) => {
+/***/ "./node_modules/css-loader/dist/runtime/api.js"
+(module) {
 
 
 
@@ -133,10 +133,10 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
-/***/ }),
+/***/ },
 
-/***/ "./node_modules/css-loader/dist/runtime/noSourceMaps.js":
-/***/ ((module) => {
+/***/ "./node_modules/css-loader/dist/runtime/noSourceMaps.js"
+(module) {
 
 
 
@@ -144,10 +144,10 @@ module.exports = function (i) {
   return i[1];
 };
 
-/***/ }),
+/***/ },
 
-/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/***/ ((module) => {
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
+(module) {
 
 
 
@@ -234,10 +234,10 @@ module.exports = function (list, options) {
   };
 };
 
-/***/ }),
+/***/ },
 
-/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
-/***/ ((module) => {
+/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js"
+(module) {
 
 
 
@@ -274,10 +274,10 @@ function insertBySelector(insert, style) {
 }
 module.exports = insertBySelector;
 
-/***/ }),
+/***/ },
 
-/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
-/***/ ((module) => {
+/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js"
+(module) {
 
 
 
@@ -290,10 +290,10 @@ function insertStyleElement(options) {
 }
 module.exports = insertStyleElement;
 
-/***/ }),
+/***/ },
 
-/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js"
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 
@@ -306,10 +306,10 @@ function setAttributesWithoutAttributes(styleElement) {
 }
 module.exports = setAttributesWithoutAttributes;
 
-/***/ }),
+/***/ },
 
-/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
-/***/ ((module) => {
+/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js"
+(module) {
 
 
 
@@ -373,10 +373,10 @@ function domAPI(options) {
 }
 module.exports = domAPI;
 
-/***/ }),
+/***/ },
 
-/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
-/***/ ((module) => {
+/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js"
+(module) {
 
 
 
@@ -393,7 +393,7 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
-/***/ })
+/***/ }
 
 /******/ 	});
 /************************************************************************/
