@@ -21,7 +21,7 @@
   "private": true,
   "dependencies": {
     "@trim21/gm-fetch": "^0.3.0",
-    "jquery": "^3.7.1"
+    "jquery": "^4.0.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json}": [
