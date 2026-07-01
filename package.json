@@ -37,7 +37,7 @@
     "css-loader": "^7.1.4",
     "husky": "^9.1.7",
     "less": "^4.6.7",
-    "less-loader": "^12.3.2",
+    "less-loader": "^13.0.0",
     "lint-staged": "^16.4.0",
     "prettier": "^3.9.4",
     "style-loader": "^4.0.0",
