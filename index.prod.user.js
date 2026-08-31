@@ -145,14 +145,93 @@ module.exports = function (i) {
   return i[1];
 };
 
-/***/ },
+/***/ }
 
-/***/ "./src/index.ts"
-(module, __unused_webpack___webpack_exports__, __webpack_require__) {
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	const __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = (module) => {
+/******/ 		const getter = module && module.__esModule ?
+/******/ 			() => (module['default']) :
+/******/ 			() => (module);
+/******/ 		__webpack_require__.d(getter, { a: getter });
+/******/ 		return getter;
+/******/ 	};
+/******/ 	
+/******/ 	/* webpack/runtime/concatenation wrap */
+/******/ 	// wrap a concatenated module body as a lazy, memoized accessor; mod is
+/******/ 	// set before the body runs so re-entrant calls (require cycles) observe
+/******/ 	// the partial exports like Node.js
+/******/ 	__webpack_require__.cw = (body) => {
+/******/ 		var mod;
+/******/ 		return () => {
+/******/ 			if (body) {
+/******/ 				var fn = body;
+/******/ 				body = 0;
+/******/ 				mod = { exports: {} };
+/******/ 				fn.call(mod.exports, mod, mod.exports);
+/******/ 			}
+/******/ 			return mod.exports;
+/******/ 		};
+/******/ 	};
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	// define getter/value functions for harmony exports
+/******/ 	__webpack_require__.d = (exports, definition) => {
+/******/ 		if(Array.isArray(definition)) {
+/******/ 			var i = 0;
+/******/ 			while(i < definition.length) {
+/******/ 				var key = definition[i++];
+/******/ 				var binding = definition[i++];
+/******/ 				var descriptor = binding === 0 ? { enumerable: true, value: definition[i++] } : { enumerable: true, get: binding };
+/******/ 				if(!__webpack_require__.o(exports, key)) Object.defineProperty(exports, key, descriptor);
+/******/ 			}
+/******/ 		} else {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop));
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	__webpack_require__.nc = undefined;
+/******/ 	
+/************************************************************************/
+let __webpack_exports__ = {};
 
-
-;// ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
-var injectStylesIntoStyleTag_namespaceObject = /*#__PURE__*/__webpack_require__.cjs(function(module, exports) {
+// MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
 
 
 var stylesInDOM = [];
@@ -239,9 +318,74 @@ module.exports = function (list, options) {
 };
 });
 
-var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag_namespaceObject);
-;// ./node_modules/style-loader/dist/runtime/styleDomAPI.js
-var styleDomAPI_namespaceObject = /*#__PURE__*/__webpack_require__.cjs(function(module, exports) {
+// MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
+
+
+var memo = {};
+
+/* istanbul ignore next  */
+function getTarget(target) {
+  if (typeof memo[target] === "undefined") {
+    var styleTarget = document.querySelector(target);
+
+    // Special case to return head of iframe instead of iframe itself
+    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+      try {
+        // This will throw an exception if access to iframe is blocked
+        // due to cross-origin restrictions
+        styleTarget = styleTarget.contentDocument.head;
+      } catch (e) {
+        // istanbul ignore next
+        styleTarget = null;
+      }
+    }
+    memo[target] = styleTarget;
+  }
+  return memo[target];
+}
+
+/* istanbul ignore next  */
+function insertBySelector(insert, style) {
+  var target = getTarget(insert);
+  if (!target) {
+    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+  }
+  target.appendChild(style);
+}
+module.exports = insertBySelector;
+});
+
+// MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
+
+
+/* istanbul ignore next  */
+function insertStyleElement(options) {
+  var element = document.createElement("style");
+  options.setAttributes(element, options.attributes);
+  options.insert(element, options.options);
+  return element;
+}
+module.exports = insertStyleElement;
+});
+
+// MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
+
+
+/* istanbul ignore next  */
+function setAttributesWithoutAttributes(styleElement) {
+  var nonce =  true ? __webpack_require__.nc : 0;
+  if (nonce) {
+    styleElement.setAttribute("nonce", nonce);
+  }
+}
+module.exports = setAttributesWithoutAttributes;
+});
+
+// MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
 
 
 /* istanbul ignore next  */
@@ -305,78 +449,8 @@ function domAPI(options) {
 module.exports = domAPI;
 });
 
-var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI_namespaceObject);
-;// ./node_modules/style-loader/dist/runtime/insertBySelector.js
-var insertBySelector_namespaceObject = /*#__PURE__*/__webpack_require__.cjs(function(module, exports) {
-
-
-var memo = {};
-
-/* istanbul ignore next  */
-function getTarget(target) {
-  if (typeof memo[target] === "undefined") {
-    var styleTarget = document.querySelector(target);
-
-    // Special case to return head of iframe instead of iframe itself
-    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
-      try {
-        // This will throw an exception if access to iframe is blocked
-        // due to cross-origin restrictions
-        styleTarget = styleTarget.contentDocument.head;
-      } catch (e) {
-        // istanbul ignore next
-        styleTarget = null;
-      }
-    }
-    memo[target] = styleTarget;
-  }
-  return memo[target];
-}
-
-/* istanbul ignore next  */
-function insertBySelector(insert, style) {
-  var target = getTarget(insert);
-  if (!target) {
-    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
-  }
-  target.appendChild(style);
-}
-module.exports = insertBySelector;
-});
-
-var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector_namespaceObject);
-;// ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
-var setAttributesWithoutAttributes_namespaceObject = /*#__PURE__*/__webpack_require__.cjs(function(module, exports) {
-
-
-/* istanbul ignore next  */
-function setAttributesWithoutAttributes(styleElement) {
-  var nonce =  true ? __webpack_require__.nc : 0;
-  if (nonce) {
-    styleElement.setAttribute("nonce", nonce);
-  }
-}
-module.exports = setAttributesWithoutAttributes;
-});
-
-var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes_namespaceObject);
-;// ./node_modules/style-loader/dist/runtime/insertStyleElement.js
-var insertStyleElement_namespaceObject = /*#__PURE__*/__webpack_require__.cjs(function(module, exports) {
-
-
-/* istanbul ignore next  */
-function insertStyleElement(options) {
-  var element = document.createElement("style");
-  options.setAttributes(element, options.attributes);
-  options.insert(element, options.options);
-  return element;
-}
-module.exports = insertStyleElement;
-});
-
-var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement_namespaceObject);
-;// ./node_modules/style-loader/dist/runtime/styleTagTransform.js
-var styleTagTransform_namespaceObject = /*#__PURE__*/__webpack_require__.cjs(function(module, exports) {
+// MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
 
 
 /* istanbul ignore next  */
@@ -393,7 +467,30 @@ function styleTagTransform(css, styleElement) {
 module.exports = styleTagTransform;
 });
 
-var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform_namespaceObject);
+;// ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+injectStylesIntoStyleTag_namespaceFn();
+
+function injectStylesIntoStyleTag_default() { return injectStylesIntoStyleTag_default.c || (injectStylesIntoStyleTag_default.c = __webpack_require__.n(injectStylesIntoStyleTag_namespaceFn())); }
+;// ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+styleDomAPI_namespaceFn();
+
+function styleDomAPI_default() { return styleDomAPI_default.c || (styleDomAPI_default.c = __webpack_require__.n(styleDomAPI_namespaceFn())); }
+;// ./node_modules/style-loader/dist/runtime/insertBySelector.js
+insertBySelector_namespaceFn();
+
+function insertBySelector_default() { return insertBySelector_default.c || (insertBySelector_default.c = __webpack_require__.n(insertBySelector_namespaceFn())); }
+;// ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+setAttributesWithoutAttributes_namespaceFn();
+
+function setAttributesWithoutAttributes_default() { return setAttributesWithoutAttributes_default.c || (setAttributesWithoutAttributes_default.c = __webpack_require__.n(setAttributesWithoutAttributes_namespaceFn())); }
+;// ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+insertStyleElement_namespaceFn();
+
+function insertStyleElement_default() { return insertStyleElement_default.c || (insertStyleElement_default.c = __webpack_require__.n(insertStyleElement_namespaceFn())); }
+;// ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+styleTagTransform_namespaceFn();
+
+function styleTagTransform_default() { return styleTagTransform_default.c || (styleTagTransform_default.c = __webpack_require__.n(styleTagTransform_namespaceFn())); }
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs/index.js!./src/style/main.less
 var main = __webpack_require__("./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs/index.js!./src/style/main.less");
 ;// ./src/style/main.less
@@ -408,15 +505,15 @@ var main = __webpack_require__("./node_modules/css-loader/dist/cjs.js!./node_mod
       
       
 
-var options = {};
+var main_options = {};
 
-options.styleTagTransform = (styleTagTransform_default());
-options.setAttributes = (setAttributesWithoutAttributes_default());
-options.insert = insertBySelector_default().bind(null, "head");
-options.domAPI = (styleDomAPI_default());
-options.insertStyleElement = (insertStyleElement_default());
+main_options.styleTagTransform = (styleTagTransform_default()());
+main_options.setAttributes = (setAttributesWithoutAttributes_default()());
+main_options.insert = (insertBySelector_default()().bind)(null, "head");
+main_options.domAPI = (styleDomAPI_default()());
+main_options.insertStyleElement = (insertStyleElement_default()());
 
-var update = injectStylesIntoStyleTag_default()(main/* default */.A, options);
+var main_update = injectStylesIntoStyleTag_default()()(main/* default */.A, main_options);
 
 
 
@@ -607,101 +704,5 @@ src_main().catch((e) => {
     console.log(e);
 });
 
-
-/***/ }
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	const __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		const module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			const getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter/value functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			if(Array.isArray(definition)) {
-/******/ 				var i = 0;
-/******/ 				while(i < definition.length) {
-/******/ 					var key = definition[i++];
-/******/ 					var binding = definition[i++];
-/******/ 					if(!__webpack_require__.o(exports, key)) {
-/******/ 						if(binding === 0) {
-/******/ 							Object.defineProperty(exports, key, { enumerable: true, value: definition[i++] });
-/******/ 						} else {
-/******/ 							Object.defineProperty(exports, key, { enumerable: true, get: binding });
-/******/ 						}
-/******/ 					} else if(binding === 0) { i++; }
-/******/ 				}
-/******/ 			} else {
-/******/ 				for(var key in definition) {
-/******/ 					if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 						Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 					}
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/wrap commonjs module */
-/******/ 	(() => {
-/******/ 		// execute a CommonJS module body with real module/exports objects, returning the final exports
-/******/ 		__webpack_require__.cjs = (body) => {
-/******/ 			const mod = { exports: {} };
-/******/ 			body.call(mod.exports, mod, mod.exports);
-/******/ 			return mod.exports;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/nonce */
-/******/ 	(() => {
-/******/ 		__webpack_require__.nc = undefined;
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module used 'module' so it can't be inlined
-/******/ 	let __webpack_exports__ = __webpack_require__("./src/index.ts");
-/******/ 	
 /******/ })()
 ;
