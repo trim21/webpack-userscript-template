@@ -231,7 +231,7 @@ module.exports = function (i) {
 let __webpack_exports__ = {};
 
 // MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
-var injectStylesIntoStyleTag_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
+var injectStylesIntoStyleTag_namespaceFn = /*#__PURE__*/__webpack_require__.cw((module) => {
 
 
 var stylesInDOM = [];
@@ -319,7 +319,7 @@ module.exports = function (list, options) {
 });
 
 // MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
-var insertBySelector_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
+var insertBySelector_namespaceFn = /*#__PURE__*/__webpack_require__.cw((module) => {
 
 
 var memo = {};
@@ -357,7 +357,7 @@ module.exports = insertBySelector;
 });
 
 // MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
-var insertStyleElement_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
+var insertStyleElement_namespaceFn = /*#__PURE__*/__webpack_require__.cw((module) => {
 
 
 /* istanbul ignore next  */
@@ -371,7 +371,7 @@ module.exports = insertStyleElement;
 });
 
 // MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
-var setAttributesWithoutAttributes_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
+var setAttributesWithoutAttributes_namespaceFn = /*#__PURE__*/__webpack_require__.cw((module) => {
 
 
 /* istanbul ignore next  */
@@ -385,7 +385,7 @@ module.exports = setAttributesWithoutAttributes;
 });
 
 // MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
-var styleDomAPI_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
+var styleDomAPI_namespaceFn = /*#__PURE__*/__webpack_require__.cw((module) => {
 
 
 /* istanbul ignore next  */
@@ -450,7 +450,7 @@ module.exports = domAPI;
 });
 
 // MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
-var styleTagTransform_namespaceFn = /*#__PURE__*/__webpack_require__.cw(function(module, exports) {
+var styleTagTransform_namespaceFn = /*#__PURE__*/__webpack_require__.cw((module) => {
 
 
 /* istanbul ignore next  */
